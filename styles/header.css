@@ -1,0 +1,57 @@
+header{
+    margin: 10px;
+    
+}
+.head,
+nav,
+.navContent,
+nav a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color:#F25C05;
+}
+.foto{
+    width: 5vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+/*hero*/
+.hero{
+    width: 100%;
+    position: relative;
+    
+}
+.hero img{
+    width: 100%;
+    opacity: 0.6;
+    position: relative;
+    z-index: -1;
+}
+h1 {
+    position: absolute;
+    top: 30%; /* Posiciona o texto no centro vertical */
+    left: 40%; /* Posiciona o texto no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: white; /* Cor do texto */
+    text-align: left; /* Alinhamento do texto */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
+    font-size: 5vw;
+}
+.projectBtnHero{
+    position: absolute;
+    top: 70%; /* Posiciona o texto no centro vertical */
+    left: 80%; /* Posiciona o texto no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
+    font-size: 1.5vw;
+   
+}
