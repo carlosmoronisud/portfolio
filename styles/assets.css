@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     gap: 1vw;
     text-align: center;
 }
@@ -68,13 +68,13 @@ form{
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 60%;
-    margin: 50px;
+    width: 80%;
+    margin: 10%;
    
 }
 input,
 textarea{
-    font-size: 1.5vw;
+    font-size: 2vw;
     border: transparent;
     background-color: #030E16;
     width: 100%;
@@ -82,7 +82,7 @@ textarea{
     color: white;   
 }
 label{
-    font-size: 1.5vw;
+    font-size: 2vw;
     background-color: #030E16;
     width: 100%;
     padding: 10px;
@@ -97,7 +97,7 @@ label{
 }
 .sh img,
 .hobb img{
-    width: 5vw;
+    width: 8vw;
 }
 .sh h2,
 .hobb h2{
