@@ -68,8 +68,8 @@ form{
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 80%;
-    margin: 10%;
+    width: 60%;
+    margin: 1%;
    
 }
 input,
@@ -119,3 +119,26 @@ label{
 #abo img{
     width: 3vw;
 }
+#sobe{
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 7vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    transform: translatey(100%);
+    cursor: pointer;
+}
+#sobe.visible{
+    visibility: visible;
+    opacity: 0.6;
+    transform: translateY(0);
+}
+.invalid-input {
+    border: 1px solid red;    
+}
+span{
+    color: red;
+}
+
