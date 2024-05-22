@@ -1,54 +1,33 @@
-var formValid = true;
-var vazio = '';
-var inputs = document.querySelectorAll('#myForm input');
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("myForm");
 
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita o envio do formulário padrão
 
-document.getElementById('enviarBtn').addEventListener('click', function(event){
-    if (!formValid) {
-        event.preventDefault();
-        document.getElementById('errorMessage').innerHTML = vazio;
-        document.getElementById('errorMessage').style.display = 'block';
-    } else {
-        document.getElementById('errorMessage').innerHTML = '';
-        document.getElementById('errorMessage').style.display = 'none';
-    }
+        var formData = new FormData(form); // Obtém os dados do formulário
+
+        var xhr = new XMLHttpRequest(); // Cria uma nova requisição AJAX
+
+        xhr.open("POST", form.action, true); // Configura a requisição POST para o endpoint do Formspree
+
+        xhr.setRequestHeader("Accept", "application/json");
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Sucesso - mostra uma mensagem de sucesso
+                    // console.log("Formulário enviado com sucesso!");
+                    alert("Formulário enviado com sucesso!");
+                    form.reset(); // Limpa o formulário após o envio bem-sucedido
+                } else {
+                    // Falha -mostra uma mensagem de erro ou lida com o erro de outra forma
+                    // console.error("O envio do formulário falhou!");
+                    alert("O envio do formulário falhou!");
+                }
+            }
+        };
+
+        xhr.send(formData); // Envia os dados do formulário
+    });
 });
 
-var nameInp = document.getElementById('name');
-var emailInp = document.getElementById('email');
-var assuntoInp = document.getElementById('subject');
-var messagemInp = document.getElementById('message');
-
-if (nameInp.value.trim() === '') {
-    vazio += 'Por favor, preencha seu nome.<br>';
-    formValid = false; 
-} else if (nameInp.value.length > 50) {
-    vazio += 'O nome não pode ter mais de 50 caracteres.<br>';
-    formValid = false; 
-}
-
-if (assuntoInp.value.trim() === '') {
-    vazio += 'Por favor, preencha seu assunto.<br>';
-    formValid = false; 
-} else if (assuntoInp.value.length > 50) {
-    vazio += 'O assunto não pode ter mais de 50 caracteres.<br>';
-    formValid = false; 
-}
-
-var emailValue = emailInp.value.trim();
-if (emailValue === '') {
-    vazio += 'Por favor, preencha seu e-mail.<br>';
-    formValid = false; 
-} else if (!isValidEmail(emailValue)) {
-    vazio += 'Por favor, insira um e-mail válido (exemplo: texto@texto.com).<br>';
-    formValid = false; 
-}
-
-var messageValue = messagemInp.value.trim();
-if (messageValue === '') {
-    vazio += 'Por favor, preencha a mensagem.<br>';
-    formValid = false; 
-} else if (messageValue.length > 300) {
-    vazio += 'A mensagem deve conter no máximo 300 caracteres.<br>';
-    formValid = false; 
-}
