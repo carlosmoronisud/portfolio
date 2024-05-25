@@ -1,7 +1,7 @@
 const texts = {
     pt: {
         aboNav: "Sobre",
-        eduNav: "Educação",
+        eduNav: "Formação",
         contNav: "Contato",
         welcome: "Bem-vindo à minha página.<br>Deixe-me mostrar meus projetos",
         portfolio: "Portfólio",
@@ -12,6 +12,7 @@ const texts = {
         techSkills: "Habilidades Técnicas",
         interpersonalSkills: "Habilidades Interpessoais",
         hobbies: "Hobbies",
+        edu: "Formação",
         dateUni: "Jun/2023 até Dez/2025",
         dateOne: "Jan/2024 até Ago/2024",
         dateEbac: "Jun/2022 até Ago/2024",
@@ -40,6 +41,7 @@ const texts = {
         techSkills: "Habilidades Técnicas",
         interpersonalSkills: "Habilidades Interpersonales",
         hobbies: "Pasatiempos",
+        edu: "Educación",
         dateUni: "Jun/2023 hasta Dic/2025",
         dateOne: "Ene/2024 hasta Ago/2024",
         dateEbac: "Jun/2022 hasta Ago/2024",
@@ -67,6 +69,7 @@ const texts = {
         techSkills: "Hard Skills",
         interpersonalSkills: "Soft Skills",
         hobbies: "Hobbies",
+        edu: "Education",
         dateUni: "Jun/2023 to Dec/2025",
         dateOne: "Jan/2024 to Aug/2024",
         dateEbac: "Jun/2022 to Aug/2024",
@@ -96,6 +99,7 @@ function changeLanguage(lang) {
     document.querySelector('.harsK').textContent = texts[lang].techSkills;
     document.querySelector('.softK').textContent = texts[lang].interpersonalSkills;
     document.querySelector('.titleHobb').textContent = texts[lang].hobbies;
+    document.querySelector('.eduT').textContent = texts[lang].edu;
     document.querySelector('.dateUni').textContent =  texts[lang].dateUni;
     document.querySelector('.dateOne').textContent =  texts[lang].dateOne;
     document.querySelector('.dateEbac').textContent =  texts[lang].dateEbac;
