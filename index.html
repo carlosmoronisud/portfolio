@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <style></style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Garcia</title>
+    <script src="script/language.js" d></script>
     <link rel="stylesheet" href="styles/rest.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/assets.css">
 </head>
 <body>
-    <cotainer class="site">
+    <container class="site">
     <header>
         <container class="head">
             <h2>Carlos Moroni</h2>
+             <!-- Botões de Idioma -->
+             <div class="language-buttons">
+                <button id="pt" class="btn active" onclick="changeLanguage('pt')">Português</button>
+                <button id="es" class="btn" onclick="changeLanguage('es')">Español</button>
+                <button id="en" class="btn" onclick="changeLanguage('en')">English</button>
+            </div>
+            
             <nav id="nav">
                 <ul class="navContent">
-                    <div class="abo"><a href="#abo">About</a>
-                    </div>
-                    <div class="edu"><a href="#edu">Education</a></div>
-                    <div class="cont"><a href="#contct">Contact me</a></div>
+                    <div class="abo"><a class="aboNav" href="#abo">Sobre</a></div>
+                    <div class="edu"><a class="eduNav" href="#edu">Educação</a></div>
+                    <div class="cont"><a class="contNav" href="#contct">Contato</a></div>
                 </ul>
                 <img src="imagem/foto.png" alt="foto" class="foto">
             </nav>
+            
         </container>
     </header>
     <main>
         <container class="container">
         <container class="hero">
             <img src="imagem/hero.png" alt="Fundo Hero" class="imgHero">
-            <h1>Welcome to my page. <br>
-                Let me show you my projects</h1>
-                <section class="projectBtnHero">
-                    <h3>Portfolio</h3>
-                    <p>Challenge Alura Portfolio</p>
-                    <ul class="btn">
-                        <a class="rep" href="https://github.com/carlosmoronisud/portfolio">Repositóiro</a>
-                        <a class="demo" href="">Ver demo</a>
-                        <a class="fig" href="https://www.figma.com/design/J72UmlsFOofBgiIdQSQCwG/Challenge-Front-end-Portf%C3%B3lio-(Copy)?node-id=49104%3A128&t=NxTSwTgGYKhoE31d-1">Figma</a>
-                    </ul>
-                </section>
+            <h1 class="welcome-message">Bem-vindo à minha página.<br>Deixe-me mostrar meus projetos</h1>
+            <section class="projectBtnHero">
+                <h3 class="portfolio">Portfólio</h3>
+                <p class="portfolio-description">Desafio Alura Portfólio</p>
+                <ul class="btn">
+                    <a class="rep" href="https://github.com/carlosmoronisud/portfolio">Repositório</a>
+                    <a class="demo" href="">Ver demo</a>
+                    <a class="fig" href="https://www.figma.com/design/J72UmlsFOofBgiIdQSQCwG/Challenge-Front-end-Portf%C3%B3lio-(Copy)?node-id=49104%3A128&t=NxTSwTgGYKhoE31d-1">Figma</a>
+                </ul>
+            </section>
         </container>
         <container class="prjects">
             <aside class="sh">
                 <section class="skils">
-                    <h2>Hard skils</h2>
+                    <h2 class="harsK">Habilidades Técnicas</h2>
                     <ul>
                         <a href="" class="html"><img src="imagem/html.png" alt="html"></a>
                         <a href="" class="css"><img src="imagem/css.png" alt="css"></a>
                         <a href="" class="js"><img src="imagem/js.png" alt="js"></a>
                         <a href="" class="py"><img src="imagem/py.png" alt="py"></a>
-                        <a href="" class="re"><img src="imagem/reac.png" alt="re"></a>
+                        <a href="" class="re"><img src="imagem/reac.png" alt="react"></a>
                         <a href="" class="fi"><img src="imagem/fig.png" alt="figma"></a>
                     </ul>
                 </section>
                 <section class="hobb">
-                    <h2>Soft skils</h2>
+                    <h2 class="softK">Habilidades Interpessoais</h2>
                     <ul>
-                        <a href="" class="pi"><img src="imagem/lider.png" alt="pi"></a>
-                        <a href="" class="game"><img src="imagem/cop.png" alt="game"></a>
-                        <a href="" class="dive"><img src="imagem/comuni.png" alt="dive"></a>
-                        <a href="" class="gym"><img src="imagem/cria.png" alt="gym"></a>
-                        <a href="" class="cook"><img src="imagem/adap.png" alt="cook"></a>
-                        <a href="" class="trav"><img src="imagem/org.png" alt="trav"></a>
+                        <a href="" class="pi"><img src="imagem/lider.png" alt="liderança"></a>
+                        <a href="" class="game"><img src="imagem/cop.png" alt="cooperação"></a>
+                        <a href="" class="dive"><img src="imagem/comuni.png" alt="comunicação"></a>
+                        <a href="" class="gym"><img src="imagem/cria.png" alt="criatividade"></a>
+                        <a href="" class="cook"><img src="imagem/adap.png" alt="adaptação"></a>
+                        <a href="" class="trav"><img src="imagem/org.png" alt="organização"></a>
                     </ul>
                 </section>
                 <section class="hobb">
-                    <h2>Hobbies</h2>
+                    <h2 class="titleHobb">Hobbies</h2>
                     <ul>
-                        <a href="" class="pi"><img src="imagem/piano.png" alt="pi"></a>
+                        <a href="" class="pi"><img src="imagem/piano.png" alt="piano"></a>
                         <a href="" class="game"><img src="imagem/game.png" alt="game"></a>
-                        <a href="" class="dive"><img src="imagem/dive.png" alt="dive"></a>
-                        <a href="" class="gym"><img src="imagem/gym.png" alt="gym"></a>
-                        <a href="" class="cook"><img src="imagem/cok.png" alt="cook"></a>
-                        <a href="" class="trav"><img src="imagem/travel.png" alt="trav"></a>
+                        <a href="" class="dive"><img src="imagem/dive.png" alt="mergulho"></a>
+                        <a href="" class="gym"><img src="imagem/gym.png" alt="academia"></a>
+                        <a href="" class="cook"><img src="imagem/cok.png" alt="cozinhar"></a>
+                        <a href="" class="trav"><img src="imagem/travel.png" alt="viajar"></a>
                     </ul>
                 </section>
             </aside>
@@ -82,11 +88,11 @@
                 <section class="projectR">
                     <img src="imagem/decod.png" alt="Decodificador" class="pr">
                     <div class="projectBtn">
-                        <h3>Decodificador de texto</h3>
-                        <p>Challenge Alura Decodificador</p>
+                        <h3 class="project-title">Decodificador de Texto</h3>
+                        <p class="project-description">Desafio Alura Decodificador</p>
                         <br>
                         <ul>
-                            <a class="rep" href="https://github.com/carlosmoronisud/projetosAlura">Repositóiro</a>
+                            <a class="rep" href="https://github.com/carlosmoronisud/projetosAlura">Repositório</a>
                             <a class="demo" href="https://carlosmoronisud.github.io/projetosAlura/">Ver demo</a>
                             <a class="fig" href="https://www.figma.com/design/cAhAcV6IyWNHRpZ9v8pPtL/Alura-Challenge---Desafio-1---L%C3%B3gica?t=NxTSwTgGYKhoE31d-1">Figma</a>
                         </ul>
@@ -95,24 +101,23 @@
                 <section class="projectL">
                     <img src="imagem/larcon.png" alt="Larcon Planejados" class="pr">
                     <div class="projectBtn">
-                        <h3>Larcon Planejados</h3>
-                        <p>Web page Marcenaria</p>
+                        <h3 class="project-title">Larcon Planejados</h3>
+                        <p class="project-description">Web Page Marcenaria</p>
                         <br>
                         <ul>
-                            <a class="rep" href="https://github.com/carlosmoronisud/larcon/tree/main">Repositóiro</a>
+                            <a class="rep" href="https://github.com/carlosmoronisud/larcon/tree/main">Repositório</a>
                             <a class="demo" href="https://larcon.vercel.app/">Ver demo</a>
                             <a class="fig" href="https://www.figma.com/design/kOw1Z3RQWFCtOl5UYa7N1N/larconplanejados?node-id=0%3A1&t=Bml95ecUoDFxvP7m-1">Figma</a>
                         </ul>
                     </div>
                 </section>
                 <section class="projectR">
-                    <img src="imagem/finnapp.png" alt="QReceitas" class="pr">
+                    <img src="imagem/finnapp.png" alt="FinnApp" class="pr">
                     <div class="projectBtn">
-                        <h3>FinnAssis</h3>
-                        <p>Challenge UX/UI EBAC</p>
+                        <h3 class="project-title">FinnApp</h3>
+                        <p class="project-description">Desafio UX/UI EBAC</p>
                         <br>
                         <ul>
-                            <!-- <a class="rep" href="">Repositóiro</a> -->
                             <a class="demo" href="https://www.figma.com/proto/FXrgkjCFjltKztxjikmzQT/FinApp-projeto-final?node-id=172-3577&starting-point-node-id=172%3A3714&t=KQSEEPgjo73ayP8v-1">Ver demo</a>
                             <a class="fig" href="https://www.figma.com/design/K4N2ftzpsLMER2EaiUXTzg/FinApp?node-id=25%3A3374&t=RtvHutfS2v8HwEDu-1">Figma</a>
                         </ul>
@@ -121,43 +126,46 @@
                 <section class="projectR">
                     <img src="imagem/qreceitas.png" alt="QReceitas" class="pr">
                     <div class="projectBtn">
-                        <h3>QReceitas</h3>
-                        <p>Challenge Figma EBAC</p>
+                        <h3 class="project-title">QReceitas</h3>
+                        <p class="project-description">Desafio Figma EBAC</p>
                         <br>
                         <ul>
-                            <!-- <a class="rep" href="">Repositóiro</a> -->
-                            <!-- <a class="demo" href="">Ver demo</a> -->
-                            <a class="fig" href="https://www.figma.com/design/NENoZfExtH8VGECYRDjNtD/Qdeli?node-id=51%3A632&t=sAFKWFN2N4ssJPpU-1">Figma</a>
+                            <a class="fig" href="https://www.figma.com/design/NENoZfExtH8VGECYRDjNtD/Qdeli?node-id=0%3A1&t=Ffhpf5RF88eLDzLg-1">Figma</a>
                         </ul>
                     </div>
                 </section>
-            </section>       
-        </section>
+            </section>
         </container>
-        <container id="edu">
-            <h2>Education</h2>
-            <section class="eduContent">
+        <container id="edu" class="edu">
+            <h2 class="eduT">Educação</h2>
+            <section class="eduH">       
                 <div class="uni">
-                    <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiuzvyf4aGGAxXaYUgAHX1uC-cYABAAGgJjZQ&ase=2&gclid=CjwKCAjwr7ayBhAPEiwA6EIGxHxMSiFJEgpgf1WZ3IK76RfkWlKCnrccNi6g6PgosNr2D2Qm_nQufhoCinAQAvD_BwE&ei=IyhOZszMNrSq5OUPteecqAE&ohost=www.google.com&cid=CAESVuD2S9ZgYpCLD12wGpExd21ffItzx5jX32Jpbbmn5Ku-5GCpG4pXRhTeDv7x_i0uu5D1TWi10wstRVnFQmyXv4IOXohjdqQ1Xf1H5TJG-ua-NXEkieTq&sig=AOD64_0bF7i7LF2zm9GxTz8S4y6INdFA8w&q&sqi=2&nis=4&adurl&ved=2ahUKEwiM6vaf4aGGAxU0FbkGHbUzBxUQ0Qx6BAgcEAE"><img src="imagem/uni.png" alt="Unicesumar"></a>
+                    <a href="https://www.alura.com.br/" target="_blank">
+                        <img src="imagem/uni.png" alt="Alura" class="eduImg">
+                    </a>
                     <h4>Análise e desenvolvimento<br> de sistemas</h4>
-                    <p>Jun/2023 até Dez/2025<br> Unicesumar</p>
-                </div>
-                <div class="one">
-                    <a href="https://cursos.alura.com.br/degree/certificate/64eb75fd-6788-45c6-a77f-430acdca5c9e?lang"><img src="imagem/one.png" alt="One"></a>
-                    <h4>Formação Front-end</h4>
-                    <p>Jan/2024 até Ago/2024 <br>Oracle Next Education</p>
+                    <p class="dateUni">Jun/2023 até Dez/2025<br> Unicesumar</p>
                 </div>
                 <div class="ebac">
-                    <a href="https://ebaconline.com.br/"><img src="imagem/ebac.png" alt="ebac"></a>
+                    <a href="https://ebaconline.com.br/" target="_blank">
+                        <img src="imagem/ebac.png" alt="Ebac" class="eduImg">
+                    </a>
                     <h4>Profissão UX/Ui Design</h4>
-                    <p>Jun/2022 até Ago/2024<br> EBAC</p>
+                    <p class="dateEbac">Jun/2022 até Ago/2024<br> EBAC</p>
+                </div>
+                <div class="one">
+                    <a href="https://www.udemy.com/" target="_blank">
+                        <img src="imagem/one.png" alt="Udemy" class="eduImg">
+                    </a>
+                    <h4>Formação Front-end</h4>
+                    <p class="dateOne">Jan/2024 até Ago/2024 <br>Oracle Next Education</p>
                 </div>
             </section>
         </container>
         <container id="abo">
-            <h2>About</h2>
+            <h2 class="aboT">Sobre</h2>
             <section class="aboContent">
-                <p>I am a student of Systems Analysis and Development with a focus on Front-end and UX/UI Design. After 10 years in the industry, I am now transitioning to digital product development. Passionate about technology and innovation, I am seeking new challenges to create impactful digital experiences. Let's collaborate to bring ideas to life!</p>
+                <span class="aboC">Sou estudante de Análise e Desenvolvimento de Sistemas com foco em Front-end e Design de UX/UI. Depois de 10 anos na indústria, agora estou fazendo a transição para o desenvolvimento de produtos digitais. Apaixonado por tecnologia e inovação, estou procurando novos desafios para criar experiências digitais de impacto. Vamos colaborar para transformar ideias em realidade!</span>
                 <div class="links">
                     <ul>
                         <a href="www.linkedin.com/in/carlosmoronigarcia" class="in"><img src="imagem/in.png" alt="linkedin"></a>
@@ -171,43 +179,44 @@
             </section>
         </container>
         <container id="contct">
-            <h2>Contact me</h2>
+            <h2 class="contT">Contatos</h2>
             <form id="myForm" class="validate-form" action="https://formspree.io/f/xkndarqk" method="POST">
-                <label for="name">Name:</label>
+                <label class="nomeLab" for="name">Nome:</label>
                 <input type="text" id="name" placeholder="André Lisboa" required name="name" maxlength="50">
                 <span id="error-msg" style="display:none;">Name is a required field (maximum of 50 characters)</span>
             
                 <br>
             
-                <label for="email">Email:</label>
+                <label class="emailLab" for="email">Email:</label>
                 <input type="email" id="email" placeholder="andre.lisboa@alur.com" required name="email">
                 <span id="email-error-msg" style="display:none;">Email (valid email)</span>
             
                 <br>
             
-                <label for="subject">Subject:</label>
+                <label class="subLab" for="subject">Assunto:</label>
                 <input type="text" id="subject" placeholder=" " required name="subject" maxlength="50">
                 <span id="subject-error-msg" style="display:none;">Subject is a required field (maximum of 50 characters)</span>
             
                 <br>
             
-                <label for="message">Message:</label>
+                <label class="msgLab" for="message">Messagem:</label>
                 <textarea id="message" rows="5" placeholder=" " required name="message" maxlength="300"></textarea>
                 <span id="message-error-msg" style="display:none;">Message  ( maximum of 300 characters)</span>
             
                 <br>
             
-                <input id="enviarBtn" class="enviar" type="submit" value="Submit">
+                <input id="enviarBtn" class="enviar" type="submit" value="Enviar">
             </form>
                  
         </container>
     </container>
     </main>
     <footer>
-        <h4>Desenvolvido por Carlos Moroni Garcia<br>2024</h4>
+        <h4 class="foot">Desenvolvido por Carlos Moroni Garcia<br>2024</h4>
     </footer>
     <a href="#nav"><img id="sobe" src="imagem/anterior.png" alt="sobe"></a>
-</cotainer> 
+</cotainer>
+
 <script src="script/form1.js"></script>
 <script src="script/form.js"></script>
 <script src="script/backToTop.js"></script>   

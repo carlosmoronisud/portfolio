@@ -3,8 +3,35 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5vw;
-    font-size: 1vw;
-    
+    font-size: 1vw; 
+}
+button{
+    background-color: transparent;
+    border: none;
+}
+.btn.active {
+    background-color:#0f3350;    
+    padding: 0.2rem;
+    border-radius: 3px;
+  }
+#pt {
+    color:#009c3b;
+    font-size: 1.5vw;
+}
+#es{
+    color: #F1BF00;
+    font-size: 1.5vw;
+}
+#en{
+    color: rgb(255, 255, 255);
+    font-size: 1.5vw;
+}
+.language-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.5vw;
+    margin-top: 10px;
 }
 .projectBtnHero p{
     white-space: nowrap;
@@ -132,7 +159,7 @@ label{
 }
 #sobe.visible{
     visibility: visible;
-    opacity: 0.6;
+    opacity: 1;
     transform: translateY(0);
 }
 .invalid-input {
