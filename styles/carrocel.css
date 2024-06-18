@@ -1,0 +1,66 @@
+.projects{
+    width: 90%;
+    position: relative;
+}
+.slide{
+    display: none;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: wrap;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.slide img{ 
+    width: 50%;    
+    
+}
+@media screen and (max-width: 600px) {
+    .slide img{
+        width: 100%;
+    }
+    
+}
+.slide:first-child{
+    display: flex;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 5px;    
+    list-style: none; 
+    padding: 0; 
+}
+ul a {
+    display: block; 
+    margin: 5px 0; 
+}
+.projectBtn, .project-description, ul {
+    margin: 10px 0; 
+}
+#prevBtnSala{
+    position: absolute;
+    top: 50px;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: black;
+    opacity: 0.5;
+    border: none;
+    font-size: 7vw;
+    color: white;
+    cursor: pointer;
+}
+#nextBtnSala{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-size: 7vw;
+    color: white;
+    cursor: pointer;
+}
