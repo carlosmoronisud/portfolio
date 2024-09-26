@@ -1,30 +1,54 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+document.querySelectorAll('.section-title').forEach(title => {
+    // Inicialmente, define as cores dos títulos e oculta as seções
+    const collapsible = title.nextElementSibling;
+    collapsible.style.display = "none"; // Garante que as seções estão fechadas ao carregar
+    title.style.color = "#ffffff"; // Cor padrão ao carregar
 
-    const prevButton = document.getElementById('prevBtnSala');
-    const nextButton = document.getElementById('nextBtnSala');
+    title.addEventListener('click', () => {
+        const isOpen = collapsible.style.display === "block"; // Verifica se está aberto
 
-    function showSlide(index) {
+        // Alterna o display do collapsible
+        collapsible.style.display = isOpen ? "none" : "block";
+
+        // Muda a cor do título baseado no estado
+        title.style.color = isOpen ? "#ffffff" : "#F25C05";
+    });
+});
+
+
+// Função para navegar nos slides
+document.querySelectorAll('.collapsible').forEach(collapsible => {
+    let index = 0;
+
+    const slides = collapsible.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const prevBtn = collapsible.querySelector('.prevBtn');
+    const nextBtn = collapsible.querySelector('.nextBtn');
+
+    // Exibe a imagem correspondente ao índice
+    function mostrarImagem() {
         slides.forEach((slide, i) => {
             slide.style.display = (i === index) ? 'block' : 'none';
         });
     }
 
-    function showNextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
+    // Função para ir para o próximo slide
+    function proximo() {
+        index = (index + 1) % totalSlides;
+        mostrarImagem();
     }
 
-    function showPrevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
+    // Função para ir para o slide anterior
+    function anterior() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        mostrarImagem();
     }
 
-    nextButton.addEventListener('click', showNextSlide);
-    prevButton.addEventListener('click', showPrevSlide);
+    // Inicializa o carrossel
+    mostrarImagem();
 
-    // Show the first slide initially
-    showSlide(currentSlide);
+    // Adiciona eventos aos botões
+    nextBtn.addEventListener('click', proximo);
+    prevBtn.addEventListener('click', anterior);
 });
 

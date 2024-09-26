@@ -1,30 +1,31 @@
-.projects{
-    width: 90%;
-    position: relative;
-}
-.slide{
-    display: none;
-    position: relative;
+.projects {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: wrap;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
+    margin: 1vw;
 }
-.slide img{ 
-    width: 50%;    
+
+.projectContent{
+    width: 50%;
+}
+.slide img {
+    border: solid 1px;
+    border-radius: 10px;
+    width: 100%;
+    flex-shrink: -1;
+    max-height: 900px;
     
 }
-@media screen and (max-width: 600px) {
-    .slide img{
+
+@media screen and (max-width: 900px) {
+    .slide img {
         width: 100%;
     }
-    
-}
-.slide:first-child{
-    display: flex;
+    .projectSlide {
+        flex-direction: column;
+    }
+    .projectContent{
+        width: 100%;
+    }
+
 }
 ul {
     display: flex;
@@ -34,33 +35,83 @@ ul {
     padding: 0; 
 }
 ul a {
-    display: block; 
     margin: 5px 0; 
 }
-.projectBtn, .project-description, ul {
+
+.project-description, ul {
     margin: 10px 0; 
 }
-#prevBtnSala{
-    position: absolute;
-    top: 50px;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: black;
-    opacity: 0.5;
+
+.carrossel-front-end button,
+.carrossel-ux-ui button,
+.carrossel-negocios button{       
     border: none;
-    font-size: 7vw;
-    color: white;
+    font-size: 5em;
+    color:#F25C05;
     cursor: pointer;
-}
-#nextBtnSala{
-    position: absolute;
-    top: 50px;
-    right: 0;
+    align-items: center;
+    margin: 10px;
+    bottom: 0;
+    left: 50%;
     transform: translateY(-50%);
-    z-index: 10;
-    background-color: transparent;
-    border: none;
-    font-size: 7vw;
-    color: white;
-    cursor: pointer;
 }
+.btn{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.section-title {
+    font-size: 2.5em;
+    cursor: pointer;
+    padding: 10px;
+    background: #020202;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+.section-title:hover {
+    background: #030E16;
+    border: solid 1px #F25C05;
+    border-radius: 5px;
+    font-size: 2.9em;
+}
+
+.collapsible {
+    background: #030E16;
+    
+}
+.projectSlide{
+    display: flex;
+    align-items: center;
+}
+.projectBtn {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+}
+@media (max-width: 900px) {
+    .projectBtn {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.slide {
+    display: flex;
+}
+.slide ul {
+    width: 100%;
+}
+.slide ul a {
+    width: 100%;
+}
+

@@ -11,9 +11,6 @@
     align-items: center;
     gap: 10vw;
 }
-.projects{
-    width: 100%;
-}
 .sh {
     display: flex;
     flex-direction: column;
@@ -51,7 +48,7 @@
 .projects{
     display: flex;
     flex-direction: column;
-    gap: 10vw;    
+    width: 100%;
 }
 .pr{
     width: 60%;
