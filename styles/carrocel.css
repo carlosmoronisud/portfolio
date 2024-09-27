@@ -5,12 +5,12 @@
 
 .projectContent{
     width: 50%;
+    
 }
 .slide img {
     border: solid 1px;
     border-radius: 10px;
     width: 100%;
-    flex-shrink: -1;
     max-height: 900px;
     
 }
@@ -88,8 +88,8 @@ ul a {
     display: flex;
     height: 100%;
     text-align: center;
-    font-size: 1.5em;
-    padding: 10px;
+    font-size: 2vw;
+    padding: 5px;
     gap: 10px;
     width: 100%;
 }
@@ -104,6 +104,10 @@ ul a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-height: 500px;
+}
+.projectInfo{
+    max-height: 300px;
 }
 .slide {
     display: flex;
