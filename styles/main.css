@@ -82,6 +82,7 @@
 .eduH{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2px;
 }
 #abo{
@@ -147,3 +148,25 @@ footer{
     text-align: center;
     color: #F25C05;
 }
+.language-buttons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.btnLang {
+    background-color: #007bff04; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+.btnLang:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Eleva o botão levemente */
+}
+
+

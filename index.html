@@ -10,30 +10,35 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/assets.css">
     <link rel="stylesheet" href="styles/carrocel.css">
+    <link rel="stylesheet" href="styles/sanduiche.css">
 </head>
 <body>
     <container class="site">
-    <header>
-        <container class="head">
-            <h3>Carlos Moroni</h3>
-             <!-- Botões de Idioma -->
-             <div class="language-buttons">
-                <button id="pt" class="btn active" onclick="changeLanguage('pt')">Português</button>
-                <button id="es" class="btn" onclick="changeLanguage('es')">Español</button>
-                <button id="en" class="btn" onclick="changeLanguage('en')">English</button>
+        <header>
+            <div class="head">
+                <h3>Carlos Moroni</h3>
+                <!-- Botões de Idioma -->
+                <div class="language-buttons">
+                    <button id="pt" class="btnLang active" onclick="changeLanguage('pt')">Português</button>
+                    <button id="es" class="btnLang" onclick="changeLanguage('es')">Español</button>
+                    <button id="en" class="btnLang" onclick="changeLanguage('en')">English</button>
+                </div>               
+        
+                <!-- Botão Hamburger -->
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; <!-- Símbolo do menu hamburger -->
+                </div>
+        
+                <nav id="nav">
+                    <ul class="navContent">
+                        <li><a class="aboNav" href="#abo">Sobre</a></li>
+                        <li><a class="eduNav" href="#edu">Formação</a></li>
+                        <li><a class="contNav" href="#contct">Contato</a></li>
+                    </ul>
+                    <img src="imagem/foto.png" alt="foto" class="foto">
+                </nav>
             </div>
-            
-            <nav id="nav">
-                <ul class="navContent">
-                    <div class="abo"><a class="aboNav" href="#abo">Sobre</a></div>
-                    <div class="edu"><a class="eduNav" href="#edu">Formação</a></div>
-                    <div class="cont"><a class="contNav" href="#contct">Contato</a></div>
-                </ul>
-                <img src="imagem/foto.png" alt="foto" class="foto">
-            </nav>
-            
-        </container>
-    </header>
+        </header>
     <main>
         <container class="container">
         <container class="hero">
@@ -52,14 +57,30 @@
         <container class="prjects">
             <aside class="sh">
                 <section class="skils">
-                    <h2 class="harsK">Habilidades Técnicas</h2>
+                    <h2 class="harsK">Ferramentas Técnicas</h2>
                     <ul>
+                        <h3 class="harsK">Front-end</h3>
                         <a href="" class="html"><img src="imagem/html.png" alt="html"></a>
                         <a href="" class="css"><img src="imagem/css.png" alt="css"></a>
                         <a href="" class="js"><img src="imagem/js.png" alt="js"></a>
-                        <a href="" class="py"><img src="imagem/py.png" alt="py"></a>
+                        <a href="" class="py"><img src="imagem/py.jpeg" alt="py"></a>
                         <a href="" class="re"><img src="imagem/reac.png" alt="react"></a>
-                        <a href="" class="fi"><img src="imagem/fig.png" alt="figma"></a>
+                        
+                    </ul>
+                    <ul>
+                        <h3 class="harsK">Design</h3>
+                        <a href="" class="figma"><img src="imagem/fig.png" alt="figma"></a>
+                        <a href="" class="css"><img src="imagem/canva.png" alt="canva"></a>
+                        <a href="" class="js"><img src="imagem/photos.png" alt="photoshop"></a>
+                        <a href="" class="py"><img src="imagem/ilust.png" alt="ilustrator"></a>
+                        
+                    </ul>
+                    <ul>
+                        <h3 class="harsK">BA</h3>
+                        <a href="" class="pb"><img src="imagem/pb.png" alt="Poweer By"></a>
+                        <a href="" class="exel"><img src="imagem/exel.png" alt="exel"></a>
+                        <a href="" class="hub"><img src="imagem/hubs.png" alt="hubspot"></a>
+                        <a href="" class="mysql"><img src="imagem/mysql.png" alt="mysql"></a>
                     </ul>
                 </section>
                 <section class="hobb">
@@ -87,7 +108,7 @@
             </aside>
             <section class="projects">
                 <div class="section" id="ux-ui-design">
-                    <h2 class="section-title">UX/UI Design / Social Media</h2>                    
+                    <h2 class="section-title">UX/UI Design</h2>                    
                     <div class="collapsible">
                         <div class="carrossel-ux-ui">
                             <div class="slide">
@@ -106,8 +127,7 @@
                                             </ul>
                                         </div>
                                         <img src="imagem/assis.png" alt="Itaú Assis" class="cardlarcon">
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
                             </div>
                             <div class="slide">
@@ -146,31 +166,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"somando-title" class="project-title">Somando mais ações / Juridico na ruas</h2><br>
-                                                <h3 id: "somando-subtitle" class="project-subtitle">Criador de conteúdo</h3>
-                                                <p id: "somando-descr" class="project-description">Somando mais ações / Juridico na ruasídeos, carroceis de imagens, para divulgar ações e aumentar o engajamento.</p><br>                           <ul>
-                                            </div>
-                                            <ul>   
-                                                <a class="fig" href="https://www.instagram.com/somandomaisacoes/reels/">Somando mais Ações</a>
-                                                <a class="rep" href="https://github.com/carlosmoronisud/larcon/tree/main">Instagram Somando</a>
-                                                <a class="demo" href="https://www.instagram.com/juridiconasruas/">Instaram Juridico</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/somando-mais-acoes.png" alt="somando mais ações" class="cardlarcon">
-                                    </div>                                    
-                                </div>
-                            </div>
+                            
                             <ul class="btn">
                                 <button class="prevBtn" onclick="anterior()">&#10094;</button>
                                 <button class="nextBtn" onclick="proximo()">&#10095;</button>
                             </ul>   
-                        </div>
-                                  
+                        </div>                                  
                     </div>
                 </div>
                 <div class="section" id="fornt-end">
@@ -258,6 +259,8 @@
                             </ul>                    
                         </div>
                     </div>
+                </div>
+                <div class="section" id="negocios">
                     <div class="section" id="negocios">
                         <h2 class="section-title"> Business Cases</h2>
                         <div class="collapsible">
@@ -295,6 +298,38 @@
                         </div>
                     </div>
                 </div>
+                <div class="section" id="negocios">
+                    <div class="section" id="negocios">
+                        <h2 class="section-title">Social Media</h2>
+                        <div class="collapsible">
+                            <div class="carrossel-socialMedia">
+                                <div class="slide">
+                                    <div class="projectSlide">
+                                        <div class="projectBtn">
+                                            <div class="projectContent">
+                                                <div class="projectInfo">
+                                                    <h2 id:"somando-title" class="project-title">Somando mais ações / Juridico na ruas</h2><br>
+                                                    <h3 id: "somando-subtitle" class="project-subtitle">Criador de conteúdo</h3>
+                                                    <p id: "somando-descr" class="project-description">Somando mais ações / Juridico na ruasídeos, carroceis de imagens, para divulgar ações e aumentar o engajamento.</p><br>                           <ul>
+                                                </div>
+                                                <ul>   
+                                                    <a class="fig" href="https://www.instagram.com/somandomaisacoes/reels/">Somando mais Ações</a>
+                                                    <a class="rep" href="https://github.com/carlosmoronisud/larcon/tree/main">Instagram Somando</a>
+                                                    <a class="demo" href="https://www.instagram.com/juridiconasruas/">Instaram Juridico</a>
+                                                </ul>
+                                            </div>
+                                            <img src="imagem/somando-mais-acoes.png" alt="somando mais ações" class="cardlarcon">
+                                        </div>                                    
+                                    </div>
+                                </div>    
+                                <ul class="btn">
+                                    <button class="botao esquerda" onclick="anterior()">&#10094;</button>
+                                    <button class="botao direita" onclick="proximo()">&#10095;</button>
+                                </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             
         </container>
@@ -322,12 +357,19 @@
                     <h4>Formação Front-end</h4>
                     <p class="dateOne">Jan/2024 até Ago/2024 <br>Oracle Next Education</p>
                 </div>
+                <div class="one">
+                    <a href="https://www.udemy.com/" target="_blank">
+                        <img src="imagem/one.jpeg" alt="Udemy" class="eduImg">
+                    </a>
+                    <h4>Banco de dados / Mysql</h4>
+                    <p class="dateOne">Ago/2024 até Nov/2024 <br>Oracle Next Education</p>
+                </div>
             </section>
         </container>
         <container id="abo">
             <h2 class="aboT">Sobre</h2>
             <section class="aboContent">
-                <span class="aboC">Sou estudante de Análise e Desenvolvimento de Sistemas com foco em Front-end e Design de UX/UI. Depois de 10 anos na indústria, agora estou fazendo a transição para o desenvolvimento de produtos digitais. Apaixonado por tecnologia e inovação, estou procurando novos desafios para criar experiências digitais de impacto. Vamos colaborar para transformar ideias em realidade!</span>
+                <span class="aboC">Sou estudante de Análise e Desenvolvimento de Sistemas com conhecimento em Front-end e Design de UX/UI. Com conhecimento em Análise de negócios digitais e produstos digitais. Apaixonado por tecnologia e inovação faço treinamentos, workshops e consultorias de transformação digital para MEIs com foco em treinar e conduzir seus projetos para o sucesso, indicando as melhores ferramentas para cada negócio. Tenho familiaridade com Lean Startup e outras metodologias Ageis, para análise de requisitos e documentação. Vamos colaborar para transformar ideias em realidade!</span>
                 <div class="links">
                     <ul>
                         <a href="https://www.linkedin.com/in/carlosmoronigarcia/" class="in"><img src="imagem/in.png" alt="linkedin"></a>
@@ -383,6 +425,7 @@
 <script src="script/carrocel.js"></script>
 <script src="script/form.js"></script>
 <script src="script/backToTop.js"></script>
+<script src="script/sanduba.js"></script>
 <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47230763.js"></script>
 <!-- End of HubSpot Embed Code -->

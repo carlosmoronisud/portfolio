@@ -1,0 +1,43 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-buttons {
+    display: flex;
+}
+
+.menu-toggle {
+    display: none; /* Esconde o botão no desktop */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+}
+
+.navContent {
+    display: flex;
+    list-style: none;
+}
+
+.navContent li {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .navContent {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+    }
+    
+    .navContent.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+    
+    .menu-toggle {
+        display: block; /* Mostra o botão no mobile */
+    }
+}
