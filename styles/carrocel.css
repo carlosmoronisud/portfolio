@@ -12,9 +12,11 @@
 }
 .projectInfo{    
     font-size: 1.5vw;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 .slide {
-    display: flex;    
+    display: flex;  
 }
 .slide ul {
     width: 100%;
