@@ -16,12 +16,13 @@
     <container class="site">
         <header>
             <div class="head">
-                <h3>Carlos Moroni</h3>
+                
                 <!-- Botões de Idioma -->
                 <div class="language-buttons">
-                    <button id="pt" class="btnLang active" onclick="changeLanguage('pt')">Português</button>
-                    <button id="es" class="btnLang" onclick="changeLanguage('es')">Español</button>
-                    <button id="en" class="btnLang" onclick="changeLanguage('en')">English</button>
+                    <h3>Carlos Moroni</h3>
+                    <button id="pt" class="btnLang active" onclick="changeLanguage('pt')"><img src="imagem/brasil.png"></button>
+                    <button id="es" class="btnLang" onclick="changeLanguage('es')"><img src="imagem/espanha.png"></button>
+                    <button id="en" class="btnLang" onclick="changeLanguage('en')"><img src="imagem/reino-unido.png"></button>
                 </div>               
         
                 <!-- Botão Hamburger -->
@@ -43,7 +44,7 @@
         <container class="container">
         <container class="hero">
             <img src="imagem/hero.png" alt="Fundo Hero" class="imgHero">
-            <h1 class="welcome-message">Bem-vindo à minha página.<br>Deixe-me mostrar meus projetos</h1>
+            <h1 class="welcome-message"><br>Deixe-me mostrar meus projetos</h1>
             <section class="projectBtnHero">
                 <h3 class="portfolio">Portfólio</h3>
                 <p class="portfolio-description">Desafio Alura Portfólio</p>
@@ -54,10 +55,59 @@
                 </ul>
             </section>
         </container>
+        <container id="abo">
+            <h2 class="aboT">Sobre</h2>
+            <section class="aboContent">
+                <span class="aboC">Sou estudante de Análise e Desenvolvimento de Sistemas com conhecimento em Front-end e Design de UX/UI. Com conhecimento em Análise de negócios digitais e produstos digitais. Apaixonado por tecnologia e inovação faço treinamentos, workshops e consultorias de transformação digital para MEIs com foco em treinar e conduzir seus projetos para o sucesso, indicando as melhores ferramentas para cada negócio. Tenho familiaridade com Lean Startup e outras metodologias Ageis, para análise de requisitos e documentação. Vamos colaborar para transformar ideias em realidade!</span>
+                <div class="links">
+                    <ul>
+                        <a href="https://www.linkedin.com/in/carlosmoronigarcia/" class="in"><img src="imagem/in.png" alt="linkedin"></a>
+                        <a href="https://www.behance.net/carlosgarcia533" class="be"><img src="imagem/be.png" alt="behance"></a>
+                        <a href="https://medium.com/@carlosmoronisud" class="Med"><img src="imagem/me.png" alt="mediun"></a>
+                        <a href="http://github.com/carlosmoronisud" class="git"><img src="imagem/git.png" alt="github"></a>
+                        <a href="https://wa.me/5519988735558" class="zap"><img src="imagem/zap.png" alt="Whatsapp"></a>
+                        <a href="https://drive.google.com/file/d/1S8kKW8Yt8LR8lknZcJNc0Teilp49-294/view?usp=sharing" class="cv"><img src="imagem/cv.png" alt="prof"></a>
+                    </ul>
+                </div>         
+            </section>
+        </container>
+        <container id="edu" class="edu">
+            <h2 class="eduT">Formação</h2>
+            <section class="eduH">       
+                <div class="uni">
+                    <a href="https://www.alura.com.br/" target="_blank">
+                        <img src="imagem/uni.png" alt="Alura" class="eduImg">
+                    </a>
+                    <h4>Análise e desenvolvimento<br> de sistemas</h4>
+                    <p class="dateUni">Jun/2023 até Dez/2025<br> Unicesumar</p>
+                </div>
+                <div class="ebac">
+                    <a href="https://ebaconline.com.br/" target="_blank">
+                        <img src="imagem/ebac.png" alt="Ebac" class="eduImg">
+                    </a>
+                    <h4>Profissão UX/Ui Design</h4>
+                    <p class="dateEbac">Jun/2022 até Ago/2024<br> EBAC</p>
+                </div>
+                <div class="one">
+                    <a href="https://www.udemy.com/" target="_blank">
+                        <img src="imagem/one.png" alt="Udemy" class="eduImg">
+                    </a>
+                    <h4>Formação Front-end</h4>
+                    <p class="dateOne">Jan/2024 até Ago/2024 <br>Oracle Next Education</p>
+                </div>
+                <div class="one">
+                    <a href="https://www.udemy.com/" target="_blank">
+                        <img src="imagem/one.jpeg" alt="Udemy" class="eduImg">
+                    </a>
+                    <h4>Banco de dados / Mysql</h4>
+                    <p class="dateOne">Ago/2024 até Nov/2024 <br>Oracle Next Education</p>
+                </div>
+            </section>
+        </container>
         <container class="prjects">
             <aside class="sh">
                 <section class="skils">
-                    <h2 class="tituloSk">Ferramentas</h2>
+                    <h2 class="tituloSk">Hard Skils</h2>
                     <h3 class="harsK">Front-end</h3>
                     <ul>
                         <a href="" class="html"><img src="imagem/html.png" alt="html"></a>
@@ -83,7 +133,7 @@
                     </ul>
                 </section>
                 <section class="hobb">
-                    <h2 class="softK">Habilidades Interpessoais</h2>
+                    <h2 class="softK">Soft Skils</h2>
                     <ul>
                         <a href="" class="pi"><img src="imagem/lider.png" alt="liderança"></a>
                         <a href="" class="game"><img src="imagem/cop.png" alt="cooperação"></a>
@@ -106,6 +156,7 @@
                 </section>
             </aside>
             <section class="projects">
+                <h2 class="titleProj">Projetos</h2>
                 <div class="section" id="ux-ui-design">
                     <h2 class="section-title">UX/UI Design</h2>                    
                     <div class="collapsible">
@@ -193,7 +244,7 @@
                                             </ul>
                                         </div>
                                         <img src="imagem/aluraflix.png" alt="Aluraflix" class="cardlarcon">                    
-                                    </div>                                    
+                                    </div>                                 
                                 </div>               
                             </div>
                             <div class="slide">
@@ -269,7 +320,7 @@
                                         <div class="projectContent">
                                             <div class="projectInfo">
                                                 <h2 id:"aluraGeek-title" class="project-title">Consultoria Estratégica para a Luma Solar</h2><br>
-                                                <h3 id: "aluraGeek-subtitle" class="project-subtitle">Fortalecendo a Presença Digital e Automação de Processos</h3>
+                                                <h3 id: "aluraGeek-subtitle" class="project-subtitle">Criação de Presença Digital e Automação de Processos</h3>
                                                 <p id: "aluraGeek-descr" class="project-description">
                                                     <ul>
                                                         <li>Análise Organizacional e Mapeamento de Dificuldades</li>
@@ -331,59 +382,11 @@
                 </div>
             </section>
             
-        </container>
-        <container id="edu" class="edu">
-            <h2 class="eduT">Formação</h2>
-            <section class="eduH">       
-                <div class="uni">
-                    <a href="https://www.alura.com.br/" target="_blank">
-                        <img src="imagem/uni.png" alt="Alura" class="eduImg">
-                    </a>
-                    <h4>Análise e desenvolvimento<br> de sistemas</h4>
-                    <p class="dateUni">Jun/2023 até Dez/2025<br> Unicesumar</p>
-                </div>
-                <div class="ebac">
-                    <a href="https://ebaconline.com.br/" target="_blank">
-                        <img src="imagem/ebac.png" alt="Ebac" class="eduImg">
-                    </a>
-                    <h4>Profissão UX/Ui Design</h4>
-                    <p class="dateEbac">Jun/2022 até Ago/2024<br> EBAC</p>
-                </div>
-                <div class="one">
-                    <a href="https://www.udemy.com/" target="_blank">
-                        <img src="imagem/one.png" alt="Udemy" class="eduImg">
-                    </a>
-                    <h4>Formação Front-end</h4>
-                    <p class="dateOne">Jan/2024 até Ago/2024 <br>Oracle Next Education</p>
-                </div>
-                <div class="one">
-                    <a href="https://www.udemy.com/" target="_blank">
-                        <img src="imagem/one.jpeg" alt="Udemy" class="eduImg">
-                    </a>
-                    <h4>Banco de dados / Mysql</h4>
-                    <p class="dateOne">Ago/2024 até Nov/2024 <br>Oracle Next Education</p>
-                </div>
-            </section>
-        </container>
-        <container id="abo">
-            <h2 class="aboT">Sobre</h2>
-            <section class="aboContent">
-                <span class="aboC">Sou estudante de Análise e Desenvolvimento de Sistemas com conhecimento em Front-end e Design de UX/UI. Com conhecimento em Análise de negócios digitais e produstos digitais. Apaixonado por tecnologia e inovação faço treinamentos, workshops e consultorias de transformação digital para MEIs com foco em treinar e conduzir seus projetos para o sucesso, indicando as melhores ferramentas para cada negócio. Tenho familiaridade com Lean Startup e outras metodologias Ageis, para análise de requisitos e documentação. Vamos colaborar para transformar ideias em realidade!</span>
-                <div class="links">
-                    <ul>
-                        <a href="https://www.linkedin.com/in/carlosmoronigarcia/" class="in"><img src="imagem/in.png" alt="linkedin"></a>
-                        <a href="https://www.behance.net/carlosgarcia533" class="be"><img src="imagem/be.png" alt="behance"></a>
-                        <a href="https://medium.com/@carlosmoronisud" class="Med"><img src="imagem/me.png" alt="mediun"></a>
-                        <a href="http://github.com/carlosmoronisud" class="git"><img src="imagem/git.png" alt="github"></a>
-                        <a href="https://wa.me/5519988735558" class="zap"><img src="imagem/zap.png" alt="Whatsapp"></a>
-                        <a href="https://drive.google.com/file/d/1S8kKW8Yt8LR8lknZcJNc0Teilp49-294/view?usp=sharing" class="cv"><img src="imagem/cv.png" alt="prof"></a>
-                    </ul>
-                </div>         
-            </section>
-        </container>
+        </container>        
         <container id="contct">
-            <h2 class="contT">Contatos</h2>
+            
             <form id="myForm" class="validate-form" action="https://formspree.io/f/xkndarqk" method="POST">
+                <h2 class="contT">Contato</h2>
                 <label class="nomeLab" for="name">Nome:</label>
                 <input type="text" id="name" placeholder="André Lisboa" required name="name" maxlength="50">
                 <span id="error-msg" style="display:none;">Name is a required field (maximum of 50 characters)</span>

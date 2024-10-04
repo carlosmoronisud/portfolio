@@ -7,17 +7,9 @@ button{
     background-color:#0f3350;
     border-radius: 3px;
 }
-#pt {
-    color:#009c3b;
-    font-size: 1.5vw;
-}
-#es{
-    color: #F1BF00;
-    font-size: 1.5vw;
-}
-#en{
-    color: rgb(255, 255, 255);
-    font-size: 1.5vw;
+
+.language-buttons img{
+    width: 1vw;
 }
 .projectBtnHero p{
     white-space: nowrap;
@@ -36,32 +28,22 @@ button{
     width: 100%;
     
 }
-.rep{
+.rep, 
+.demo,
+.fig{
     border: solid 1px white;
     color: white;
     
-}
-.rep:hover{
-    border: solid 2px #F25C05;
-    color: #F25C05;
-}
-.demo{
-    background-color: #2A7AE4;
-    color: white;
     
 }
-.demo:hover{
-    background-color: blue;
-    color: wheat;
+.rep:hover, 
+.demo:hover,
+.fig:hover{       
+    background-color: #0056b3;
+    color: white;
 }
-.fig{
-    background-color: white;
-    color:black    
-}
-.fig:hover{
-    background-color: #0f3350;
-    color: wheat;
-}
+
+
 a{
     text-decoration: none;
     
@@ -73,13 +55,13 @@ form{
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 60%;
+    width: 30%;
     margin: 1%;
    
 }
 input,
 textarea{
-    font-size: 2vw;
+    font-size: 1.5vw;
     border: transparent;
     background-color: #030E16;
     width: 100%;
@@ -104,7 +86,7 @@ label{
 .hobb img{
     width: 8vw;
     border-radius: 5px;
-    max-width: 100px;
+    
     min-width: 40px;
 }
 .sh h2,
