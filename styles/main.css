@@ -16,24 +16,48 @@
     flex-direction: column;
     align-items: center; 
     text-align: center;
-    background-color: #031626;
-    padding: 1vw;
+    background-color: #031626;    
     border-radius: 10px;
     width: 100%;
+    padding: 100px;
+}
+.skils{
+    width: 60%;
 }
 .skils ul,
 .hobb ul {
     display: flex;
-    justify-content: space-around;
-    padding: 2vw;
-    border: solid 1vw black;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;    
+    border-radius: 5px;
+    
 }
 .skils a,
 .hobb a {
     display: flex;
     justify-content: space-between;
-    border: solid 1vw black;
+    border-radius: 3px;    
+}
+.tituloSk{
+    width: 100%;
+    padding: 30px;
+}
+.skils h3{
+    width: 100%;
+    font-size: 1.2vw;
+    text-align: left;
+    border-bottom: solid 1px rgb(255, 255, 255) ;
+}
+.hobb h2 {
+    width: 100%;
+    padding-top: 100px;    
     gap: 10px;
+}
+.skils a:hover,
+.hobb a:hover {
+        border: solid 1px rgb(255, 255, 255);
+    border-radius: 3px;
 }
 @media (max-width: 700px){
     .projectL{
@@ -50,23 +74,6 @@
     flex-direction: column;
     width: 100%;
 }
-.pr{
-    width: 60%;
-}
-.projectR{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-}
-.projectL{
-    display: flex;
-    justify-content: space-evenly;
-    
-    align-items: center;
-    gap: 20px;
-}
-
 #edu{
     width: 100%;
     display: flex;
@@ -168,5 +175,3 @@ footer{
     background-color: #0056b3; /* Cor de fundo ao passar o mouse */
     transform: translateY(-2px); /* Eleva o botão levemente */
 }
-
-

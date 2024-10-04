@@ -1,19 +1,12 @@
-.btn{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5vw;
-    font-size: 1vw; 
-}
+
 button{
     background-color: transparent;
     border: none;
 }
 .btn.active {
-    background-color:#0f3350;    
-    padding: 0.2rem;
+    background-color:#0f3350;
     border-radius: 3px;
-  }
+}
 #pt {
     color:#009c3b;
     font-size: 1.5vw;
@@ -26,14 +19,6 @@ button{
     color: rgb(255, 255, 255);
     font-size: 1.5vw;
 }
-.language-buttons{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 0.5vw;
-    margin-top: 10px;
-}
-
 .projectBtnHero p{
     white-space: nowrap;
     margin: 10px;
@@ -48,15 +33,13 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 90%;
-    gap: 1vw;
-    text-align: center;
+    width: 100%;
+    
 }
 .rep{
-    border: solid 0.15vw white;
+    border: solid 1px white;
     color: white;
-    align-items: center;
-    padding: 1vw;
+    
 }
 .rep:hover{
     border: solid 2px #F25C05;
@@ -65,14 +48,13 @@ button{
 .demo{
     background-color: #2A7AE4;
     color: white;
-    padding: 1vw;
+    
 }
 .demo:hover{
     background-color: blue;
     color: wheat;
 }
 .fig{
-    padding: 1vw;
     background-color: white;
     color:black    
 }
@@ -82,15 +64,10 @@ button{
 }
 a{
     text-decoration: none;
+    
 }
 a:hover{
     color: blue;
-}
-
-.projectBtn ul{
-      display: flex;
-      flex-direction: column;
-      text-align: center;
 }
 form{
     display: flex;
@@ -126,10 +103,14 @@ label{
 .sh img,
 .hobb img{
     width: 8vw;
+    border-radius: 5px;
+    max-width: 100px;
+    min-width: 40px;
 }
 .sh h2,
 .hobb h2{
     font-size: 2.5vw;
+
 }
 #edu img{
     width: 20vw;

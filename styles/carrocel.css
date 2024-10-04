@@ -1,19 +1,35 @@
 .projects {
-    width: 80%;
+    width: 70%;
     height: auto;
     margin: 1vw;
 }
-
-.projectContent{
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50%;
-    
+   
+}
+.projectInfo{    
+    font-size: 1.5vw;
+}
+.slide {
+    display: flex;    
+}
+.slide ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slide ul a {
+    width: 100%;
 }
 .slide img {
     border: solid 1px;
     border-radius: 10px;
     width: 100%;
-    max-height: 900px;
-    
+    height: 100%;
 }
 
 @media screen and (max-width: 900px) {
@@ -52,17 +68,13 @@ ul a {
     cursor: pointer;
     align-items: center;
     margin: 10px;
-    bottom: 0;
-    left: 50%;
-    transform: translateY(-50%);
 }
 .btn{
     display: flex;
     justify-content: space-around;
-    padding: 20px;
 }
 .section-title {
-    font-size: 2.5em;
+    font-size: 3vw;
     cursor: pointer;
     padding: 10px;
     background: #020202;
@@ -74,12 +86,10 @@ ul a {
     background: #030E16;
     border: solid 1px #F25C05;
     border-radius: 5px;
-    font-size: 2.9em;
+    font-size: 2.9vw;
 }
-
 .collapsible {
     background: #030E16;
-    
 }
 .projectSlide{
     display: flex;
@@ -89,7 +99,7 @@ ul a {
     display: flex;
     height: 100%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 5px;
     gap: 10px;
     width: 100%;
@@ -101,22 +111,5 @@ ul a {
     }
 }
 
-.projectContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-height: 500px;
-}
-.projectInfo{
-    max-height: 300px;
-}
-.slide {
-    display: flex;
-}
-.slide ul {
-    width: 100%;
-}
-.slide ul a {
-    width: 100%;
-}
+
 
