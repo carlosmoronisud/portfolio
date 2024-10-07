@@ -3,7 +3,7 @@ const texts = {
         aboNav: "Sobre",
         eduNav: "Formação",
         contNav: "Contato",
-        welcome: "Bem-vindo à minha página.<br>Deixe-me mostrar meus projetos",
+        welcome: "Deixe-me mostrar meus projetos",
         portfolio: "Portfólio",
         portfolioDescription: "Desafio Alura Portfólio",
         repo: "Repositório",
@@ -16,6 +16,7 @@ const texts = {
         dateUni: "Jun/2023 até Dez/2025",
         dateOne: "Jan/2024 até Ago/2024",
         dateEbac: "Jun/2022 até Ago/2024",
+        dateOne1: "Ago/2024 até Out/2024",
         aboT: "Sobre",
         abotC: "Sou estudante de Análise e Desenvolvimento de Sistemas com foco em Front-end e Design de UX/UI. Depois de 10 anos na indústria, agora estou fazendo a transição para o desenvolvimento de produtos digitais. Apaixonado por tecnologia e inovação, estou procurando novos desafios para criar experiências digitais de impacto. Vamos colaborar para transformar ideias em realidade!",
         contact: "Contato",
@@ -25,8 +26,8 @@ const texts = {
         msgLab: "Mensagem",
         send: "Enviar",
         foot: "Desenvolvido por Carlos Moroni Garcia<br>2024",
-        sobe: "sobe"
-
+        sobe: "sobe",
+        titleProj: "Projetos"
     },
     es: {
         aboNav: "Sobre",
@@ -45,8 +46,9 @@ const texts = {
         dateUni: "Jun/2023 hasta Dic/2025",
         dateOne: "Ene/2024 hasta Ago/2024",
         dateEbac: "Jun/2022 hasta Ago/2024",
+        dateOne1: "Ago/2024 hasta Out/2024",
         aboT: "Sobre",
-        abotC: "Soy estudiante de Análisis y Desarrollo de Sistemas con un enfoque en Front-end y Diseño de UX/UI. Después de 10 años en la industria, ahora estoy transitando hacia el desarrollo de productos digitales. Apasionado por la tecnología y la innovación, busco nuevos desafíos para crear experiencias digitales con impacto. ¡Colaboremos para dar vida a las ideas!",
+        abotC: "Soy estudiante de Análisis y Desarrollo de Sistemas con conocimientos en Front-end y Diseño de UX/UI. Tengo experiencia en análisis de negocios digitales y productos digitales. Apasionado por la tecnología y la innovación, realizo capacitaciones, talleres y consultorías de transformación digital para microempresarios individuales (MEIs), enfocándome en entrenar y guiar sus proyectos hacia el éxito, recomendando las mejores herramientas para cada negocio. Estoy familiarizado con Lean Startup y otras metodologías ágiles para análisis de requisitos y documentación. ¡Colaboremos para convertir ideas en realidad!",
         contact: "Contacto",
         nomeLab: "Nombre",
         emailLab: "Email",
@@ -54,7 +56,8 @@ const texts = {
         msgLab: "Mensaje",
         send: "Enviar",
         foot: "Desarrollado por Carlos Moroni Garcia<br>2024",
-        sobe: "Arriba"
+        sobe: "Arriba",
+        titleProj: "Proyectos"
     },
     en: {
         aboNav: "About",
@@ -66,15 +69,16 @@ const texts = {
         repo: "Repository",
         demo: "View demo",
         figma: "Figma",
-        techSkills: "Hard Skills",
+        tituloSk: "Hard Skills",
         interpersonalSkills: "Soft Skills",
         hobbies: "Hobbies",
         edu: "Education",
         dateUni: "Jun/2023 to Dec/2025",
         dateOne: "Jan/2024 to Aug/2024",
         dateEbac: "Jun/2022 to Aug/2024",
+        dateOne1: "Ago/2024 to Out/2024",
         aboT: "About",
-        abotC: "I am a student of Systems Analysis and Development with a focus on Front-end and UX/UI Design. After 10 years in the industry, I am now transitioning to digital product development. Passionate about technology and innovation, I am seeking new challenges to create impactful digital experiences. Let's collaborate to bring ideas to life!",
+        abotC: "I am a student of Systems Analysis and Development with knowledge in Front-end and UX/UI Design. I have expertise in digital business analysis and digital products. Passionate about technology and innovation, I conduct training sessions, workshops, and digital transformation consulting for individual micro-entrepreneurs (MEIs), focusing on training and guiding their projects to success by recommending the best tools for each business. I am familiar with Lean Startup and other Agile methodologies for requirements analysis and documentation. Let’s collaborate to turn ideas into reality!",
         contact: "Contact",
         nomeLab: "Name",
         emailLab: "Email",
@@ -82,7 +86,8 @@ const texts = {
         msgLab: "Message",
         send: "Send",
         foot: "Developed by Carlos Moroni Garcia<br>2024",
-        sobe: "Up"
+        sobe: "Up",
+        titleProj: "Projects"
     }
 };
 
@@ -92,17 +97,19 @@ function changeLanguage(lang) {
     document.querySelector('.contNav').innerHTML = texts[lang].contNav;
     document.querySelector('.welcome-message').innerHTML = texts[lang].welcome;
     document.querySelector('.portfolio').textContent = texts[lang].portfolio;
+    document.querySelector('.titleProj').textContent = texts[lang].titleProj;
     document.querySelector('.portfolio-description').textContent = texts[lang].portfolioDescription;
     document.querySelectorAll('.rep').forEach(el => el.textContent = texts[lang].repo);
     document.querySelectorAll('.demo').forEach(el => el.textContent = texts[lang].demo);
     document.querySelectorAll('.fig').forEach(el => el.textContent = texts[lang].figma);
-    document.querySelector('.harsK').textContent = texts[lang].techSkills;
-    document.querySelector('.softK').textContent = texts[lang].interpersonalSkills;
+    // document.querySelector('.harsK').textContent = texts[lang].techSkills;
+    // document.querySelector('.softK').textContent = texts[lang].interpersonalSkills;
     document.querySelector('.titleHobb').textContent = texts[lang].hobbies;
     document.querySelector('.eduT').textContent = texts[lang].edu;
     document.querySelector('.dateUni').textContent =  texts[lang].dateUni;
     document.querySelector('.dateOne').textContent =  texts[lang].dateOne;
     document.querySelector('.dateEbac').textContent =  texts[lang].dateEbac;
+    document.querySelector('#dateOne').textContent = texts[lang].dateOne1;
     document.querySelector('.aboT').innerHTML = texts[lang].aboT;
     document.querySelector('.aboContent span').textContent =  texts[lang].abotC;
     document.querySelector('.contT').innerHTML = texts[lang].contact;
