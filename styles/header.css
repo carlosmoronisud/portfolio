@@ -15,7 +15,10 @@ nav a{
     color:#ffffff;
 }
 .foto{
-    width: 5vw;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .container{
