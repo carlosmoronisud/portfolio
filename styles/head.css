@@ -1,0 +1,128 @@
+ :root {
+    --bg-dark: #0A0C1A;
+    --text-purple: #DA00FF;
+    --highlight: #E0E0E0;
+} 
+/* Reset de estilo */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  body {
+    font-family: 'Courier New', sans-serif;
+    background: linear-gradient(135deg, #0A0C1A 0%, #12152E 50%, #1C1A2B 100%);
+    color: var(--text-purple);
+    line-height: 1.6;
+    
+  }  
+  header {
+    width: 100%;    
+    padding: 1rem;
+    color: #E0E0E0;
+    border-bottom: solid 0.1px #e59ff1
+    
+  }  
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }  
+  .language-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .language-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .language-buttons img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  /* Foto de perfil no canto superior direito */
+  .foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Menu de navegação */
+  nav {
+    display: flex;
+  }  
+  .navContent {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  .navContent li a {
+    
+    text-decoration: none;
+    color: #E0E0E0;
+    font-weight: 500;
+  }
+  .navContent li:hover {
+    transform: scale(1.1);
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .right-section {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      width: 100%;
+    }
+  
+    nav.open {
+      display: block;
+    }
+  
+    .navContent {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+  }
+  

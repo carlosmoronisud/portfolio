@@ -5,440 +5,371 @@
     <meta property="og:image" content="imagem/micros.png" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Garcia</title>
-    <script src="script/language.js" d></script>
-    <link rel="stylesheet" href="styles/rest.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/assets.css">
+    <script src="script/language.js" d></script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
+    <link rel="stylesheet" href="styles/head.css">
+    <link rel="stylesheet" href="styles/main.css">    
     <link rel="stylesheet" href="styles/carrocel.css">
-    <link rel="stylesheet" href="styles/sanduiche.css">
 </head>
 <body>
     <container class="site">
         <header>
             <div class="head">
-                
-                <!-- Botões de Idioma -->
+              <div class="left-section">
+                <h3 class="site-title">Carlos Moroni</h3>
                 <div class="language-buttons">
-                    <h3>Carlos Moroni</h3>
-                    <button id="pt" class="btnLang active" onclick="changeLanguage('pt')"><img src="imagem/brasil.png"></button>
-                    <button id="es" class="btnLang" onclick="changeLanguage('es')"><img src="imagem/espanha.png"></button>
-                    <button id="en" class="btnLang" onclick="changeLanguage('en')"><img src="imagem/reino-unido.png"></button>
-                </div>               
-        
-                <!-- Botão Hamburger -->
-                <div class="menu-toggle" id="menu-toggle">
-                    &#9776; <!-- Símbolo do menu hamburger -->
+                  <button id="pt" class="btnLang active" onclick="changeLanguage('pt')">
+                    <img src="imagem/brasil.png" alt="Português">
+                  </button>
+                  <button id="es" class="btnLang" onclick="changeLanguage('es')">
+                    <img src="imagem/espanha.png" alt="Español">
+                  </button>
+                  <button id="en" class="btnLang" onclick="changeLanguage('en')">
+                    <img src="imagem/reino-unido.png" alt="English">
+                  </button>
                 </div>
-        
+              </div>          
+              <div class="right-section">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </button>          
                 <nav id="nav">
-                    <ul class="navContent">
-                        <li><a class="aboNav" href="#abo">Sobre</a></li>
-                        <li><a class="eduNav" href="#edu">Formação</a></li>
-                        <li><a class="contNav" href="#contct">Contato</a></li>
-                    </ul>
-                    <img src="imagem/micros.png" alt="foto" class="foto">
-                </nav>
+                  <ul class="navContent">
+                    <!-- <li><a class="aboNav" href="#abo">Sobre</a></li>
+                    <li><a class="eduNav" href="#edu">Formação</a></li>
+                    <li><a class="contNav" href="#contct">Contato</a></li> -->
+                  </ul>
+                </nav>          
+                <img src="imagem/micros.png" alt="Foto de perfil" class="foto">
+              </div>
             </div>
-        </header>
+          </header>
+                            
     <main>
         <container class="container">
-        <container class="hero">
-            <img src="imagem/hero.png" alt="Fundo Hero" class="imgHero">
-            <h1 class="welcome-message"><br>Deixe-me mostrar meus projetos</h1>
-            <section class="projectBtnHero">
-                <h3 class="portfolio">Portfólio</h3>
-                <p class="portfolio-description">Desafio Alura Portfólio</p>
-                <ul class="btn">
-                    <a class="rep" href="https://github.com/carlosmoronisud/portfolio">Repositório</a>
-                    <a class="demo" href="">Ver demo</a>
-                    <a class="fig" href="https://www.figma.com/design/J72UmlsFOofBgiIdQSQCwG/Challenge-Front-end-Portf%C3%B3lio-(Copy)?node-id=49104%3A128&t=NxTSwTgGYKhoE31d-1">Figma</a>
-                </ul>
-            </section>
-        </container>
-        <container id="abo">
-            <h2 class="aboT">Sobre</h2>
-            <section class="aboContent">
-                <span class="aboC">Sou estudante de Análise e Desenvolvimento de Sistemas com conhecimento em Front-end e Design de UX/UI. Com conhecimento em Análise de negócios digitais e produstos digitais. Apaixonado por tecnologia e inovação faço treinamentos, workshops e consultorias de transformação digital para MEIs com foco em treinar e conduzir seus projetos para o sucesso, indicando as melhores ferramentas para cada negócio. Tenho familiaridade com Lean Startup e outras metodologias Ageis, para análise de requisitos e documentação. Vamos colaborar para transformar ideias em realidade!</span>
-                <div class="links">
-                    <ul>
-                        <a href="https://www.linkedin.com/in/carlosmoronigarcia/" class="in"><img src="imagem/in.png" alt="linkedin"></a>
-                        <a href="https://www.behance.net/carlosgarcia533" class="be"><img src="imagem/be.png" alt="behance"></a>
-                        <a href="https://medium.com/@carlosmoronisud" class="Med"><img src="imagem/me.png" alt="mediun"></a>
-                        <a href="http://github.com/carlosmoronisud" class="git"><img src="imagem/git.png" alt="github"></a>
-                        <a href="https://wa.me/5519988735558" class="zap"><img src="imagem/zap.png" alt="Whatsapp"></a>
-                        <a href="https://drive.google.com/file/d/1S8kKW8Yt8LR8lknZcJNc0Teilp49-294/view?usp=sharing" class="cv"><img src="imagem/cv.png" alt="prof"></a>
-                    </ul>
-                </div>         
-            </section>
-        </container>
-        <container id="edu" class="edu">
-            <h2 class="eduT">Formação</h2>
-            <section class="eduH">       
-                <div class="uni">
-                    <a href="https://www.alura.com.br/" target="_blank">
-                        <img src="imagem/uni.png" alt="Alura" class="eduImg">
-                    </a>
-                    <h4>Análise e desenvolvimento<br> de sistemas</h4>
-                    <p class="dateUni">Jun/2023 até Dez/2025<br> Unicesumar</p>
+            <section id="abo">
+              <div class="links">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/carlosmoronigarcia/" class="in"><img src="imagem/in.png" alt="LinkedIn"></a></li>
+                            <li><a href="https://www.behance.net/carlosgarcia533" class="be"><img src="imagem/be.png" alt="Behance"></a></li>
+                            <li><a href="https://medium.com/@carlosmoronisud" class="Med"><img src="imagem/me.png" alt="Medium"></a></li>
+                            <li><a href="http://github.com/carlosmoronisud" class="git"><img src="imagem/git.png" alt="GitHub"></a></li>
+                            <li><a href="https://wa.me/5519988735558" class="zap"><img src="imagem/zap.png" alt="WhatsApp"></a></li>
+                            <li><a href="https://drive.google.com/file/d/1S8kKW8Yt8LR8lknZcJNc0Teilp49-294/view?usp=sharing" class="cv"><img src="imagem/cv.png" alt="Currículo"></a></li>
+                        </ul>  
+                  </div> 
+                <div class="aboContent">
+                  <p class="aboIntro">
+                    Sou Desenvolvedor Full Stack e Pesquisador em Ciência de Dados, com expertise em UX/UI Design e automação de processos. <em>(Sim, sou um entusiasta da inovação, curioso e aprendo rápido)</em>. Atuo na interseção entre tecnologia e negócios, transformando problemas complexos em soluções escaláveis através de:
+                  </p>
+              
+                  <ul class="bulletList">
+                    <li><strong>Desenvolvimento web:</strong> Java, React, Python</li>
+                    <li><strong>Análise de dados e NLP:</strong> Mineração de Redes Sociais – CIBERDEM/Mackenzie</li>
+                    <li><strong>Design estratégico de produtos:</strong> Figma, Design Thinking</li>
+                    <li><strong>Transformação digital para MEIs:</strong> Implementação de RPA e estratégias lean com tecnologia acessível</li>
+                  </ul>
+              
+                  <p class="aboFinal">
+                    Minha abordagem combina metodologias ágeis com pesquisa orientada a dados — porque inovação, para ser efetiva, precisa ser técnica e humana ao mesmo tempo.
+                  </p>                           
                 </div>
-                <div class="ebac">
-                    <a href="https://ebaconline.com.br/" target="_blank">
-                        <img src="imagem/ebac.png" alt="Ebac" class="eduImg">
-                    </a>
-                    <h4>Profissão UX/Ui Design</h4>
-                    <p class="dateEbac">Jun/2022 até Ago/2024<br> EBAC</p>
-                </div>
-                <div class="one">
-                    <a href="https://www.udemy.com/" target="_blank">
-                        <img src="imagem/one.png" alt="Udemy" class="eduImg">
-                    </a>
-                    <h4>Formação Front-end</h4>
-                    <p class="dateOne">Jan/2024 até Ago/2024 <br>Oracle Next Education</p>
-                </div>
-                <div class="one">
-                    <a href="https://www.udemy.com/" target="_blank">
-                        <img src="imagem/one.jpeg" alt="Udemy" class="eduImg">
-                    </a>
-                    <h4>Banco de dados / Mysql</h4>
-                    <p id="dateOne" class="dateOne">Ago/2024 até Nov/2024 <br>Oracle Next Education</p>
-                </div>
-            </section>
+            </section>      
         </container>
         <container class="prjects">
-            <aside class="sh">
-                <section class="skils">
-                    <h2 class="tituloSk">Hard Skils</h2>
-                    <h3 class="harsK">Front-end</h3>
+            <section class="skills-projects">
+                <div class="accordion-container">
+              
+                  <!-- DESIGN -->
+                  <div class="accordion-item">
+                    <button class="accordion-header">Design <span class="icons">
                     <ul>
-                        <a href="" class="html"><img src="imagem/html.png" alt="html"></a>
-                        <a href="" class="css"><img src="imagem/css.png" alt="css"></a>
-                        <a href="" class="js"><img src="imagem/js.png" alt="js"></a>
-                        <a href="" class="py"><img src="imagem/py.jpeg" alt="py"></a>
-                        <a href="" class="re"><img src="imagem/reac.png" alt="react"></a>
+                        <li><img src="/imagem/figma.png" alt="Figma"></li>
+                        <li><img src="/imagem/canva.png" alt="canva"></span></li>
+                        <li><img src="/imagem/photos.png" alt="photoshop"></li>
+                        <li><img src="/imagem/ilust.png" alt="illustrator"></li>
+                    </ul>
+                    </span></button>
+                    <div class="accordion-content">
+                    <div class="carousel-wrapper">                        
+                            <div class="carousel">
+
+                             <!-- cards aqui -->
                         
-                    </ul>
-                    <h3 class="harsK">Design</h3>
-                    <ul>                       
-                         <a href="" class="figma"><img src="imagem/fig.png" alt="figma"></a>
-                        <a href="" class="css"><img src="imagem/canva.png" alt="canva"></a>
-                        <a href="" class="js"><img src="imagem/photos.png" alt="photoshop"></a>
-                        <a href="" class="py"><img src="imagem/ilust.png" alt="ilustrator"></a>                        
-                    </ul>
-                    <h3 class="harsK">BA</h3>
-                    <ul>                        
-                        <a href="" class="pb"><img src="imagem/pb.png" alt="Poweer By"></a>
-                        <a href="" class="exel"><img src="imagem/exel.png" alt="exel"></a>
-                        <a href="" class="hub"><img src="imagem/hubs.png" alt="hubspot"></a>
-                        <a href="" class="mysql"><img src="imagem/mysql.png" alt="mysql"></a>
-                    </ul>
-                </section>
-                <section class="hobb">
-                    <h2 class="softK">Soft Skils</h2>
-                    <ul>
-                        <a href="" class="pi"><img src="imagem/lider.png" alt="liderança"></a>
-                        <a href="" class="game"><img src="imagem/cop.png" alt="cooperação"></a>
-                        <a href="" class="dive"><img src="imagem/comuni.png" alt="comunicação"></a>
-                        <a href="" class="gym"><img src="imagem/cria.png" alt="criatividade"></a>
-                        <a href="" class="cook"><img src="imagem/adap.png" alt="adaptação"></a>
-                        <a href="" class="trav"><img src="imagem/org.png" alt="organização"></a>
-                    </ul>
-                </section>
-                <section class="hobb">
-                    <h2 class="titleHobb">Hobbies</h2>
-                    <ul>
-                        <a href="" class="pi"><img src="imagem/piano.png" alt="piano"></a>
-                        <a href="" class="game"><img src="imagem/game.png" alt="game"></a>
-                        <a href="" class="dive"><img src="imagem/dive.png" alt="mergulho"></a>
-                        <a href="" class="gym"><img src="imagem/gym.png" alt="academia"></a>
-                        <a href="" class="cook"><img src="imagem/cok.png" alt="cozinhar"></a>
-                        <a href="" class="trav"><img src="imagem/travel.png" alt="viajar"></a>
-                    </ul>
-                </section>
-            </aside>
-            <section class="projects">
-                <h2 class="titleProj">Projetos</h2>
-                <div class="section" id="ux-ui-design">
-                    <h2 class="section-title">UX/UI Design</h2>                    
-                    <div class="collapsible">
-                        <div class="carrossel-ux-ui">
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 class="project-title">Itaú Assis</h2>
-                                                <h3 class="project-subtitle">Projeto parceria Itaú - EBAC</h3>
-                                                <p class="project-description">Desenvolvimento de 3 soluções de interface para os 4 canais de atendimento do banco
-
-                                                <br>   Utilização de técnicas de UX Research para ideação e validação, juntamente com UI Design para criar uma interface atrativa, intuitiva e consistente com o guia de estilos do Itaú, para um aplicativo de finanças.
-                                                </p>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://medium.com/@carlosmoronisud/projeto-parceria-itaú-d191f8686f02">Artigo</a>
-                                                <a class="demo" href="https://www.figma.com/proto/xnUpngXKtEEw9yfIh9VXdO/Itau">Ver demo</a>
-                                                <a class="fig" href="https://www.figma.com/design/xnUpngXKtEEw9yfIh9VXdO/Itau">Figma</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/assis.png" alt="Itaú Assis" class="cardlarcon">
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 class="project-title">FinnApp</h2>
-                                                <h3 class="project-subtitle">Desafio UX/UI EBAC</h3>
-                                                <p class="project-description">Utilização de técnicas de UX para validação de design e criação de interface para um aplicativo de finanças, aplicando UI Design no desenvolvimento dos frames e no design visual do aplicativo.
-
-                                                </p>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://medium.com/@carlosmoronisud/desenvolvendo-um-app-de-controle-financeiro-da-identifica%C3%A7%C3%A3o-do-problema-ao-prot%C3%B3tipo-de-alta-bf725796a058">Artigo</a>
-                                                <a class="demo" href="https://www.figma.com/proto/FXrgkjCFjltKztxjikmzQT/FinApp">Ver demo</a>
-                                                <a class="fig" href="https://www.figma.com/design/K4N2ftzpsLMER2EaiUXTzg/FinApp">Figma</a>
-                                            </ul>                                            
-                                        </div>
-                                        <img src="imagem/finnapp.png" alt="FinnApp" class="finApp">
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"qreceitas-title" class="project-title">QReceitas</h2>
-                                                <h3 id: "qreceitas-subtitle" class="project-subtitle">Desafio Figma EBAC</h3>
-                                                <p id : "qreceitas-descr" class="project-description">Criação de uma interface amigávelpara um aplicativo de busca de receitas utilizando tecnicas de UI design e figma.</p><br>                          
-                                            </div>
-                                            <ul>
-                                                <a class="fig" href="https://www.figma.com/design/NENoZfExtH8VGECYRDjNtD/Qdeli?node-id=0%3A1&t=Ffhpf5RF88eLDzLg-1">Figma</a>
-                                            </ul>                                            
-                                        </div> 
-                                        <img src="imagem/qreceitas.png" alt="QReceitas" class="qreceitas">                                         
-                                    </div>
-                                </div>
-                            </div>
                             
-                            <ul class="btn">
-                                <button class="prevBtn" onclick="anterior()">&#10094;</button>
-                                <button class="nextBtn" onclick="proximo()">&#10095;</button>
-                            </ul>   
-                        </div>                                  
-                    </div>
+                            <div class="project-card">
+                            <img src="imagem/assis.png" alt="Itaú Assis" />
+                            <h4>Itaú Assis</h4>
+                            <p>Interfaces com foco em UX Research e UI Design.</p>
+                            <div class="project-links">
+                                <a href="https://medium.com/@carlosmoronisud/projeto-parceria-itaú-d191f8686f02"><img src="imagem/me.png" alt="Mediun"></a>
+                                <a href="https://www.figma.com/proto/xnUpngXKtEEw9yfIh9VXdO/Itau"><img src="imagem/apps.png" alt="Aplicação"></a>
+                                <a href="https://www.figma.com/design/xnUpngXKtEEw9yfIh9VXdO/Itau"><img src="imagem/figma.png" alt="Figma"></a>
+                            </div>
+                            </div>
+                
+                            <div class="project-card">
+                            <img src="imagem/finnapp.png" alt="FinnApp" />
+                            <h4>FinnApp</h4>
+                            <p>Controle financeiro validado com UX/UI.</p>
+                            <div class="project-links">
+                                <a href="https://medium.com/@carlosmoronisud/desenvolvendo-um-app-de-controle-financeiro-da-identifica%C3%A7%C3%A3o-do-problema-ao-prot%C3%B3tipo-de-alta-bf725796a058"><img src="imagem/me.png" alt=""></a>
+                                <a href="https://www.figma.com/proto/FXrgkjCFjltKztxjikmzQT/FinApp"><img src="imagem/apps.png" alt=""></a>
+                                <a href="https://www.figma.com/design/K4N2ftzpsLMER2EaiUXTzg/FinApp"><img src="imagem/figma.png" alt=""></a>
+                            </div>
+                            </div>
+                
+                            <div class="project-card">
+                            <img src="imagem/qreceitas.png" alt="QReceitas" />
+                            <h4>QReceitas</h4>
+                            <p>Busca de receitas com interface simples e eficaz.</p>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/NENoZfExtH8VGECYRDjNtD/Qdeli?node-id=0%3A1&t=Ffhpf5RF88eLDzLg-1"><img src="imagem/figma.png" alt=""></a>
+                            </div>                        
+                        <!-- <button class="carousel-btn left">←</button>
+                        <button class="carousel-btn right">→</button> -->
+                      </div>
+                    </div> 
+                  </div>
                 </div>
-                <div class="section" id="fornt-end">
-                    <h2 class="section-title">Front-end</h2>
-                    <div class="collapsible">
-                        <div class="carrossel-front-end" id="carouselId">
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"itau-title" class="project-title">React - AluraFlix</h2><br>
-                                                <h3 id: "itau-subtitle" class="project-subtitle">Oracle Next One - Alura</h3>
-                                                <p id: "itau-descr" class="project-description">Desenvolvimento de uma aplicação em React que receba dados de forma dinâmica por meio de um formulário e os exiba como cards editáveis.</p><br>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://github.com/carlosmoronisud/aluraflix">Repositório</a>
-                                                <a class="demo" href="https://carlosflix-aluraflix.vercel.app/">Ver demo</a>
-                                                <a class="fig" href="https://www.figma.com/design/UAaeIOMeO0bSgps06xf91B/New-AluraFlix---PT-(Copy)?node-id=1-106&t=3ksmA580yzNMjhcD-1">Figma</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/aluraflix.png" alt="Aluraflix" class="cardlarcon">                    
-                                    </div>                                 
-                                </div>               
-                            </div>
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"larcon-title" class="project-title">Larcon Planejados </h2><br>
-                                                <h3 id: "larcon-subtitle" class="project-subtitle">Freelancer - pagina comercial para empresa de marcenaria</h3>
-                                                <p di: "larcon-descr" class="project-description"> Funcionalidades solicitadas: slider de imagens, exibição de localização e contatos, utilizando Figma, JavaScript, HTML e CSS.</p><br>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://github.com/carlosmoronisud/larcon/tree/main">Repositório</a>
-                                                <a class="demo" href="https://larcon.vercel.app/">Ver demo</a>
-                                                <a class="fig" href="https://www.figma.com/design/kOw1Z3RQWFCtOl5UYa7N1N/larconplanejados?node-id=0%3A1&t=Bml95ecUoDFxvP7m-1">Figma</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/larcon.png" alt="Larcon Planejados" class="cardlarcon">                      
-                                    </div>                                    
-                                </div>               
-                            </div>
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"aluraGeek-title" class="project-title">Alura Geek</h2><br>
-                                                <h3 id: "aluraGeek-subtitle" class="project-subtitle">Desafio Oracle Next One - Alura LATAM</h3>
-                                                <p id: "aluraGeek-descr" class="project-description">Desenvolvimento de uma página fictícia para um site de e-commerce com funcionalidades de CRUD, utilizando Figma, JavaScript, HTML e CSS.</p><br>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://github.com/carlosmoronisud/AluraGeek">Repositório</a>
-                                                <a class="demo" href="https://alura-geek-orpin.vercel.app/">Ver demo</a>
-                                                <a class="fig" href="https://www.figma.com/design/L4d19TWCBe0pShvolRZ1cA/New-AluraGeek---PT-(Copy)?node-id=0-1&t=KZfV31znplnYBdha-1">Figma</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/aluraGeek.png" alt="Larcon Planejados" class="cardlarcon">                         
-                                    </div>
-                                </div>               
-                            </div>
-                            <div class="slide">
-                                <div class="projectSlide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"decod-title" class="project-title">Decodificador de Texto</h2><br><h3 id: "decod-subtitle">Oracle Next One - Alura LATAM</h3>
-                                                <p id: "decod-descr" class="project-description">Desenvolvimento de um decodificador de texto responsivo para front-end, com as funções de codificar, decodificar, copiar e limpar.</p><br>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://github.com/carlosmoronisud/projetosAlura">Repositório</a>
-                                                <a class="demo" href="https://carlosmoronisud.github.io/projetosAlura/">Ver demo</a>
-                                                <a class="fig" href="https://www.figma.com/design/cAhAcV6IyWNHRpZ9v8pPtL/Alura-Challenge---Desafio-1---L%C3%B3gica?t=NxTSwTgGYKhoE31d-1">Figma</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/decod.png" alt="Decodificador" class="cardDecodificador">               
-                                    </div>                                    
-                                </div>                    
-                            </div>
-                            <ul class="btn">
-                                <button class="prevBtn" onclick="anterior()">&#10094;</button>
-                                <button class="nextBtn" onclick="proximo()">&#10095;</button>
-                            </ul>                    
-                        </div>
-                    </div>
                 </div>
-                <div class="section" id="negocios">
-                    <div class="section" id="negocios">
-                        <h2 class="section-title"> Business Cases</h2>
-                        <div class="collapsible">
-                            <div class="carrossel-negocios">
-                                <div class="slide">
-                                    <div class="projectBtn">
-                                        <div class="projectContent">
-                                            <div class="projectInfo">
-                                                <h2 id:"aluraGeek-title" class="project-title">Consultoria Estratégica para a Luma Solar</h2><br>
-                                                <h3 id: "aluraGeek-subtitle" class="project-subtitle">Criação de Presença Digital e Automação de Processos</h3>
-                                                <p id: "aluraGeek-descr" class="project-description">
-                                                    <ul>
-                                                        <li>Análise Organizacional e Mapeamento de Dificuldades</li>
-                                                        <li>Identificação de necessidades de negócios</li>
-                                                        <li>Elaboração de estratégias de negócios</li>
-                                                        <li>Elaboração documentação de requisitos</li>
-                                                        <li>Implementação</li>
-                                                    </ul>
-                                                    .</p><br>
-                                            </div>
-                                            <ul>
-                                                <a class="rep" href="https://www.linkedin.com/pulse/consultoria-estrat%25C3%25A9gica-para-luma-solarluma-solar-presen%25C3%25A7a-garcia-lzxpf?trackingId=effbXXkuQtOkdX%2BAvyyP%2FA%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BcGVRvXi3QJqpLuMKFZvkFw%3D%3D">Artigo</a>
-                                                <a class="demo" href="https://www.instagram.com/solarluma/">Instagram</a>
-                                                <a class="fig" href="https://sites.google.com/view/luma-solar/in%C3%ADcio">Site</a>
-                                            </ul>
-                                        </div>
-                                        <img src="imagem/luma.png" alt="negócios" class="negocios">
-                                    </div>
+              
+                  <!-- FRONT-END -->
+                <div class="accordion-item">
+                <button class="accordion-header">Front-End <span class="icons">
+                    <ul>
+                        <li><img src="/imagem/html.png" alt="HTML"></li>
+                        <li><img src="/imagem/css.png" alt="CSS"></li>
+                        <li><img src="/imagem/js.png" alt="JavaScript"></li>
+                        <li><img src="/imagem/reac.png" alt="React"></li>
+                        <li><img src="/imagem/boot.png" alt="Bootstrap"></li>
+                        <li><img src="/imagem/type.png" alt="TypeScript"></li>
+                    </ul>
+                    </span></button>
+                    <div class="accordion-content">
+                        <div class="carousel-wrapper">
+                         
+                        <div class="carousel">                
+                            <div class="project-card">
+                            <img src="imagem/aluraflix.png" alt="AluraFlix" />
+                            <h4>AluraFlix</h4>
+                            <p>Catálogo com React + Formulário dinâmico.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/carlosmoronisud/aluraflix"><img src="imagem/git.png" alt=""></a>
+                                    <a href="https://carlosflix-aluraflix.vercel.app/"><img src="imagem/apps.png" alt=""></a>
+                                    <a href="https://www.figma.com/design/UAaeIOMeO0bSgps06xf91B/New-AluraFlix"><img src="imagem/figma.png" alt=""></a>
                                 </div>
-                                <ul class="btn">
-                                    <button class="botao esquerda" onclick="anterior()">&#10094;</button>
-                                    <button class="botao direita" onclick="proximo()">&#10095;</button>
-                                </ul>   
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" id="negocios">
-                    <div class="section" id="negocios">
-                        <h2 class="section-title">Social Media</h2>
-                        <div class="collapsible">
-                            <div class="carrossel-socialMedia">
-                                <div class="slide">
-                                    <div class="projectSlide">
-                                        <div class="projectBtn">
-                                            <div class="projectContent">
-                                                <div class="projectInfo">
-                                                    <h2 id:"somando-title" class="project-title">Somando mais ações / Juridico na ruas</h2><br>
-                                                    <h3 id: "somando-subtitle" class="project-subtitle">Criador de conteúdo</h3>
-                                                    <p id: "somando-descr" class="project-description">Somando mais ações / Juridico na ruas/ Feijoada do Bem.
-                                                        <br>Criação de conteúdo para Instagram, com o objetivo de divulgar as ações, aumentar o engajamento e visibilidade dos projetos.
-                                                    </p><br>                           <ul>
-                                                </div>
-                                                <ul>   
-                                                    <a class="fig" href="https://www.instagram.com/somandomaisacoes/reels/">Somando mais Ações</a>
-                                                    <a class="rep" href="https://www.instagram.com/feijoadadobemoficial/">Feijoada do Bem</a>
-                                                    <a class="demo" href="https://www.instagram.com/juridiconasruas/"> Juridico nas Ruas</a>
-                                                    <a class="demo" href="https://cmgaleria.vercel.app/">Galeria de imagens</a>
-                                                </ul>
-                                            </div>
-                                            <img src="imagem/somando-mais-acoes.png" alt="somando mais ações" class="cardlarcon">
-                                        </div>                                    
-                                    </div>
-                                </div>    
-                                <ul class="btn">
-                                    <button class="botao esquerda" onclick="anterior()">&#10094;</button>
-                                    <button class="botao direita" onclick="proximo()">&#10095;</button>
-                                </ul>   
+                              <!-- Larcon Planejados -->
+                            <div class="project-card">
+                              <img src="imagem/larcon.png" alt="Larcon Planejados" />
+                              <h4>Larcon Planejados</h4>
+                              <p>Página comercial para marcenaria com slider, mapa e contatos.</p>
+                              <div class="project-links">
+                                <a href="https://github.com/carlosmoronisud/larcon/tree/main"><img src="imagem/git.png" alt="GitHub" /></a>
+                                <a href="https://larcon.vercel.app/"><img src="imagem/apps.png" alt="Demo" /></a>
+                                <a href="https://www.figma.com/design/kOw1Z3RQWFCtOl5UYa7N1N/larconplanejados?node-id=0%3A1&t=Bml95ecUoDFxvP7m-1"><img src="imagem/figma.png" alt="Figma" /></a>
+                              </div>
                             </div>
-                        </div>
-                    </div>
+                             <!-- Alura Geek -->
+                            <div class="project-card">
+                              <img src="imagem/aluraGeek.png" alt="Alura Geek" />
+                              <h4>Alura Geek</h4>
+                              <p>Site de e-commerce com funcionalidades CRUD.</p>
+                              <div class="project-links">
+                                <a href="https://github.com/carlosmoronisud/AluraGeek"><img src="imagem/git.png" alt="GitHub" /></a>
+                                <a href="https://alura-geek-orpin.vercel.app/"><img src="imagem/apps.png" alt="Demo" /></a>
+                                <a href="https://www.figma.com/design/L4d19TWCBe0pShvolRZ1cA/New-AluraGeek---PT-(Copy)?node-id=0-1&t=KZfV31znplnYBdha-1"><img src="imagem/figma.png" alt="Figma" /></a>
+                              </div>
+                            </div>
+                            <!-- Decodificador de Texto -->
+                            <div class="project-card">
+                              <img src="imagem/decod.png" alt="Decodificador de Texto" />
+                              <h4>Decodificador de Texto</h4>
+                              <p>App responsivo com funções de codificar e decodificar.</p>
+                              <div class="project-links">
+                                <a href="https://github.com/carlosmoronisud/projetosAlura"><img src="imagem/git.png" alt="GitHub" /></a>
+                                <a href="https://carlosmoronisud.github.io/projetosAlura/"><img src="imagem/apps.png" alt="Demo" /></a>
+                                <a href="https://www.figma.com/design/cAhAcV6IyWNHRpZ9v8pPtL/Alura-Challenge---Desafio-1---L%C3%B3gica?t=NxTSwTgGYKhoE31d-1"><img src="imagem/figma.png" alt="Figma" /></a>
+                              </div>
+                            </div>                                  
+                      </div>                    
+                    <!-- <button class="carousel-btn left">←</button>
+                    <button class="carousel-btn right">→</button> -->
+                  </div>
                 </div>
-            </section>
-            
-        </container>        
-        <container id="contct">
-            
-            <form id="myForm" class="validate-form" action="https://formspree.io/f/xkndarqk" method="POST">
-                <h2 class="contT">Contato</h2>
-                <label class="nomeLab" for="name">Nome:</label>
-                <input type="text" id="name" placeholder="André Lisboa" required name="name" maxlength="50">
-                <span id="error-msg" style="display:none;">Name is a required field (maximum of 50 characters)</span>
-            
-                <br>
-            
-                <label class="emailLab" for="email">Email:</label>
-                <input type="email" id="email" placeholder="andre.lisboa@alur.com" required name="email">
-                <span id="email-error-msg" style="display:none;">Email (valid email)</span>
-            
-                <br>
-            
-                <label class="subLab" for="subject">Assunto:</label>
-                <input type="text" id="subject" placeholder=" " required name="subject" maxlength="50">
-                <span id="subject-error-msg" style="display:none;">Subject is a required field (maximum of 50 characters)</span>
-            
-                <br>
-            
-                <label class="msgLab" for="message">Messagem:</label>
-                <textarea id="message" rows="5" placeholder=" " required name="message" maxlength="300"></textarea>
-                <span id="message-error-msg" style="display:none;">Message  ( maximum of 300 characters)</span>
-            
-                <br>
-            
-                <input id="enviarBtn" class="enviar" type="submit" value="Enviar">
-            </form>
-                 
-        </container>
+                </div>
+                <!-- Back-end -->
+                              
+                <div class="accordion-item">
+                  <button class="accordion-header">Back-End
+                    <span class="icons">
+                      <ul>
+                        <li><img src="/imagem/java.png" alt="Java"></li>
+                        <li><img src="/imagem/spring.png" alt="Spring"></li>
+                        <li><img src="/imagem/mysql.png" alt="MySQL"></li>
+                      </ul>
+                    </span>
+                  </button>
+                  <div class="accordion-content">
+                    <div class="carousel-wrapper">
+                      <div class="carousel">
+
+                        <!-- Farmácia CRUD -->
+                        <div class="project-card">
+                          <img src="imagem/farmacia.png" alt="Farmácia CRUD" />
+                          <h4>Farmácia CRUD</h4>
+                          <p>API para cadastro de produtos e categorias, com endpoints REST completos.</p>
+                          <div class="project-links">
+                            <a href="https://github.com/carlosmoronisud/farmacia-CRUD"><img src="imagem/git.png" alt="GitHub"></a>
+                            <a href="https://www.notion.so/seulink/farmacia-crud"><img src="imagem/docs.png" alt="Documentação"></a>
+                          </div>
+                        </div>
+
+                        <!-- Conta Bancária -->
+                        <div class="project-card">
+                          <img src="imagem/banco.png" alt="Conta Bancária" />
+                          <h4>Conta Bancária</h4>
+                          <p>Simulação de sistema bancário com operações como saque, depósito e transferências.</p>
+                          <div class="project-links">
+                            <a href="https://github.com/carlosmoronisud/conta-bancaria"><img src="imagem/git.png" alt="GitHub"></a>
+                            <a href="https://www.notion.so/seulink/conta-bancaria"><img src="imagem/docs.png" alt="Documentação"></a>
+                          </div>
+                        </div>
+
+                        <!-- Livraria Digital -->
+                        <div class="project-card">
+                          <img src="imagem/livraria.png" alt="Livraria Digital" />
+                          <h4>Livraria Digital</h4>
+                          <p>Sistema de gerenciamento de livros, autores e categorias com relacionamentos.</p>
+                          <div class="project-links">
+                            <a href="https://github.com/carlosmoronisud/livraria-digital"><img src="imagem/git.png" alt="GitHub"></a>
+                            <a href="https://www.notion.so/seulink/livraria-digital"><img src="imagem/docs.png" alt="Documentação"></a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+                
+              
+                  <!-- BUSINESS & ANALYTICS -->
+                <div class="accordion-item">
+                    <button class="accordion-header">Business & Analytics <span class="icons">
+                    <ul>
+                        <li><img src="/imagem/ag.png" alt="Power BI"></li>
+                        <li><img src="/imagem/hub.png" alt="Power BI"></li>
+                        
+                    </ul> 
+                    </span></button>
+                    <div class="accordion-content">
+                        <div class="carousel-wrapper">
+                            
+                        <div class="carousel">
+
+                          <div class="project-card">
+                            <img src="imagem/mack.png" alt="Projeto CIBERDEM" />
+                            <h4>MackPesquisa - CIBERDEM</h4>
+                            <p> Bolsa de graduação no projeto "Mineração e Visualização de Argumentos de Redes Sociais pesquisador Jr".</p>
+                            <div class="project-links">
+                              <a href="https://ciberdem.mack.com.br/"><img src="imagem/dem.png" alt="Link"></a>
+                            </div>
+                          </div>
+
+                          <!-- Business Case: Luma Solar -->
+                        <div class="project-card">
+                          <img src="imagem/luma.png" alt="Consultoria Luma Solar" />
+                          <h4>Consultoria Luma Solar</h4>
+                          <p>Presença digital, automações e estratégias de marketing.</p>
+                          <div class="project-links">
+                            <a href="https://www.linkedin.com/pulse/consultoria-estrat%25C3%25A9gica-para-luma-solarluma-solar-presen%25C3%25A7a-garcia-lzxpf?trackingId=effbXXkuQtOkdX%2BAvyyP%2FA%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BcGVRvXi3QJqpLuMKFZvkFw%3D%3D"><img src="imagem/in.png" alt="Artigo" /></a>
+                            <a href="https://www.instagram.com/solarluma/"><img src="imagem/instagram.png" alt="Instagram" /></a>
+                            <a href="https://sites.google.com/view/luma-solar/in%C3%ADcio"><img src="imagem/apps.png" alt="Site" /></a>
+                          </div>
+                        </div>
+              
+                        <div class="project-card">
+                          <img src="imagem/carregandos.jpg" alt="BanVic Dashboard" />
+                          <h4>BanVic</h4>
+                          <p>Dashboard de banco fictício com análise de churn e insights.</p>
+                          <div class="project-links">
+                            <a href="https://lookerstudio.google.com/s/hnttu9Y3d4A"><img src="imagem/looker.png" alt=""></a>
+                            <a href="https://www.canva.com/design/DAFv3leGSc0/view"><img src="imagem/dash.png" alt=""></a>
+                          </div>
+                        </div>
+              
+                        <div class="project-card">
+                          <img src="imagem/carregandos.jpg" alt="Northwind" />
+                          <h4>Northwind</h4>
+                          <p>Case de BI para gestão de stakeholders e KPIs.</p>
+                          <div class="project-links">
+                            <a href="https://www.canva.com/design/DAFvsI7nsN0/preview"><img src="imagem/pb.png" alt=""></a>
+                            <a href="https://www.canva.com/design/DAFvsI7nsN0/preview"><img src="imagem/dash.png" alt=""></a>                           
+                        </div>                        
+                      </div>                   
+                    <!-- <button class="carousel-btn left">←</button>
+                    <button class="carousel-btn right">→</button> -->
+                    </div>
+                  </div>
+                </div>
+                </div>
+              
+                  <!-- DATA SCIENCE & IA -->
+                <div class="accordion-item">
+                    <button class="accordion-header">Data Science & IA <span class="icons">
+                    <ul>
+                      <li><img src="/imagem/pb.png" alt="Power BI"></li>
+                        <li><img src="/imagem/looker.png" alt="Looker Studio"></li>
+                        <li><img src="/imagem/exel.png" alt="Excel"></li>
+                        <li><img src="/imagem/mysql.png" alt="SQL"></li>
+                        <li><img src="/imagem/py.png" alt="Python"></li>
+                        <li><img src="/imagem/pandas.png" alt="Pandas"></li> 
+                    </ul>                       
+                    </span></button>
+                    <div class="accordion-content">
+                        <div class="carousel-wrapper">
+                        
+                        <div class="carousel">
+              
+                        <div class="project-card">
+                          <img src="imagem/carregandos.jpg" alt="Projeto IA Python" />
+                       
+                          <h4>IA Educacional</h4>
+                          <p>Bot em Python que ajuda crianças a aprenderem matemática.</p>
+                          <div class="project-links">
+                            <a href="#"><img src="imagem/carregando.png" alt=""></a>
+                          </div>
+                        </div>
+              
+                        <div class="project-card">
+                          <img src="imagem/carregandos.jpg" alt="Modelo de Churn" />
+                          <h4>Modelo de Churn</h4>
+                          <p>Modelo preditivo de abandono de clientes usando Pandas e Scikit-Learn.</p>
+                          <div class="project-links">
+                            <a href="#"><img src="imagem/carregando.png" alt=""></a>
+                        </div>
+                      </div>
+                    <!-- <button class="carousel-btn left">←</button>
+                    <button class="carousel-btn right">→</button> -->
+                  </div>
+                  </div>
+              
+                </div>
+            </section>       
+                      
     </container>
     </main>
     <footer>
         <h4 class="foot">Desenvolvido por Carlos Moroni Garcia<br>2024</h4>
     </footer>
-    <a href="#nav"><img id="sobe" src="imagem/anterior.png" alt="sobe"></a>
+    <!-- <a href="#nav"><img id="sobe" src="imagem/anterior.png" alt="sobe"></a> -->
 </cotainer>
-
-<script src="script/form1.js"></script>
 <script src="script/carrocel.js"></script>
-<script src="script/form.js"></script>
 <script src="script/backToTop.js"></script>
-<script src="script/sanduba.js"></script>
-<!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47230763.js"></script>
-<!-- End of HubSpot Embed Code -->
+<script src="script/sanduiche.js"></script>
 </body>
 </html>
