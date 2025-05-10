@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="styles/head.css">
     <link rel="stylesheet" href="styles/main.css">    
     <link rel="stylesheet" href="styles/carrocel.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
     <container class="site">
         <header>
-            <div class="head">
+            <div id="inicio" class="head">
               <div class="left-section">
                 <h3 class="site-title">Carlos Moroni</h3>
                 <div class="language-buttons">
@@ -62,72 +63,103 @@
                   </div> 
                 <div class="aboContent">
                   <p class="aboIntro">
-                    Sou Desenvolvedor Full Stack e Pesquisador em Ciência de Dados, com expertise em UX/UI Design e automação de processos. <em>(Sim, sou um entusiasta da inovação, curioso e aprendo rápido)</em>. Atuo na interseção entre tecnologia e negócios, transformando problemas complexos em soluções escaláveis através de:
-                  </p>
-              
-                  <ul class="bulletList">
-                    <li><strong>Desenvolvimento web:</strong> Java, React, Python</li>
-                    <li><strong>Análise de dados e NLP:</strong> Mineração de Redes Sociais – CIBERDEM/Mackenzie</li>
-                    <li><strong>Design estratégico de produtos:</strong> Figma, Design Thinking</li>
-                    <li><strong>Transformação digital para MEIs:</strong> Implementação de RPA e estratégias lean com tecnologia acessível</li>
-                  </ul>
-              
+                    Sou Desenvolvedor Full Stack Jr e Pesquisador Jr em Ciência de Dados, com expertise em UX/UI Design e automação de processos. <em>(Sim, sou um entusiasta da inovação, sou curioso e aprendo rápido)</em>. Gosto de atuar na interseção entre tecnologia e negócios, transformando problemas complexos em soluções escaláveis.
+                  </p>            
                   <p class="aboFinal">
-                    Minha abordagem combina metodologias ágeis com pesquisa orientada a dados — porque inovação, para ser efetiva, precisa ser técnica e humana ao mesmo tempo.
+                    Minha abordagem combina metodologias ágeis com pesquisa orientada a dados — <em>“Innovation requires an understanding of the job to be done, not just the technology itself” - Clayton Christensen - </em> Acredito que inovar de verdade é entender o humano, antes de inventar a próxima maravilha tecnológica.
                   </p>                           
                 </div>
             </section>      
         </container>
-        <container class="prjects">
+        
+        <container id="projetos" class="prjects">
             <section class="skills-projects">
                 <div class="accordion-container">
               
                   <!-- DESIGN -->
                   <div class="accordion-item">
-                    <button class="accordion-header">Design <span class="icons">
-                    <ul>
-                        <li><img src="/imagem/figma.png" alt="Figma"></li>
-                        <li><img src="/imagem/canva.png" alt="canva"></span></li>
-                        <li><img src="/imagem/photos.png" alt="photoshop"></li>
-                        <li><img src="/imagem/ilust.png" alt="illustrator"></li>
-                    </ul>
-                    </span></button>
-                    <div class="accordion-content">
+                    <button class="accordion-header">Design 
+                      <span class="icons">
+                        <ul>
+                          <li><img src="/imagem/figma.png" alt="Figma"></li>
+                          <li><img src="/imagem/canva.png" alt="canva"></span></li>
+                          <li><img src="/imagem/photos.png" alt="photoshop"></li>
+                          <li><img src="/imagem/ilust.png" alt="illustrator"></li>
+                        </ul>
+                      </span>
+                    </button>
+                    <div class="accordion-content">                      
+                      <div class="accordion-education">                      
+                        <div class="education-logos">
+                          <div class="education-card">                                        
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1fGhkJCWzNrlRxxdiY83gNznjNdeLx24Q/view?usp=sharing"><img src="/imagem/ebac.jpg" alt="EBAC">
+                            <div class="certificates-title">
+                            <p>UX/UI Design</p></a>
+                          </div>                    
+                        </div>
+                        <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/19Q0ZFdrGLf-BaQbWqgv_O2lm128mQTHz/view?usp=sharing"><img src="/imagem/ebac.jpg" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Figma aplicado</p> 
+                          </div>
+                          </a>
+                        </div>
+                          <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1jcE-xy0fxnt_PR32DW01IB6CZlB-PYav/view?usp=sharing"><img src="/imagem/ebac.jpg" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Inteligência<br> Artificial</p>
+                          </div>
+                          </a>
+                        </div>
+                          <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1JULI28BpV0MM9VxYAx121co4jVgAYdwM/view?usp=sharing"><img src="/imagem/ebac.jpg" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Photoshop<br>Aplicado </p> 
+                          </div>
+                          </a>                                                              
+                        </div>
+                      </div>
+                    </div>
+                  </div>             
+                  
+                  <div class="accordion-content">
                     <div class="carousel-wrapper">                        
-                            <div class="carousel">
+                      <div class="carousel">
 
-                             <!-- cards aqui -->
-                        
-                            
-                            <div class="project-card">
-                            <img src="imagem/assis.png" alt="Itaú Assis" />
-                            <h4>Itaú Assis</h4>
-                            <p>Interfaces com foco em UX Research e UI Design.</p>
-                            <div class="project-links">
-                                <a href="https://medium.com/@carlosmoronisud/projeto-parceria-itaú-d191f8686f02"><img src="imagem/me.png" alt="Mediun"></a>
-                                <a href="https://www.figma.com/proto/xnUpngXKtEEw9yfIh9VXdO/Itau"><img src="imagem/apps.png" alt="Aplicação"></a>
-                                <a href="https://www.figma.com/design/xnUpngXKtEEw9yfIh9VXdO/Itau"><img src="imagem/figma.png" alt="Figma"></a>
+                        <!-- cards aqui -->
+
+                        <div class="project-card">
+                          <img src="imagem/assis.png" alt="Itaú Assis" />
+                          <h4>Itaú Assis</h4>
+                          <p>Interfaces com foco em UX Research e UI Design.</p>
+                          <div class="project-links">
+                            <a href="https://medium.com/@carlosmoronisud/projeto-parceria-itaú-d191f8686f02"><img src="imagem/me.png" alt="Mediun"></a>
+                            <a href="https://www.figma.com/proto/xnUpngXKtEEw9yfIh9VXdO/Itau"><img src="imagem/apps.png" alt="Aplicação"></a>
+                            <a href="https://www.figma.com/design/xnUpngXKtEEw9yfIh9VXdO/Itau"><img src="imagem/figma.png" alt="Figma"></a>
+                          </div>
+                        </div>                
+                        <div class="project-card">
+                          <img src="imagem/finnapp.png" alt="FinnApp" />
+                          <h4>FinnApp</h4>
+                          <p>Controle financeiro validado com UX/UI.</p>
+                          <div class="project-links">
+                              <a href="https://medium.com/@carlosmoronisud/desenvolvendo-um-app-de-controle-financeiro-da-identifica%C3%A7%C3%A3o-do-problema-ao-prot%C3%B3tipo-de-alta-bf725796a058"><img src="imagem/me.png" alt=""></a>
+                              <a href="https://www.figma.com/proto/FXrgkjCFjltKztxjikmzQT/FinApp"><img src="imagem/apps.png" alt=""></a>
+                              <a href="https://www.figma.com/design/K4N2ftzpsLMER2EaiUXTzg/FinApp"><img src="imagem/figma.png" alt=""></a>
                             </div>
-                            </div>
+                          </div>
                 
-                            <div class="project-card">
-                            <img src="imagem/finnapp.png" alt="FinnApp" />
-                            <h4>FinnApp</h4>
-                            <p>Controle financeiro validado com UX/UI.</p>
-                            <div class="project-links">
-                                <a href="https://medium.com/@carlosmoronisud/desenvolvendo-um-app-de-controle-financeiro-da-identifica%C3%A7%C3%A3o-do-problema-ao-prot%C3%B3tipo-de-alta-bf725796a058"><img src="imagem/me.png" alt=""></a>
-                                <a href="https://www.figma.com/proto/FXrgkjCFjltKztxjikmzQT/FinApp"><img src="imagem/apps.png" alt=""></a>
-                                <a href="https://www.figma.com/design/K4N2ftzpsLMER2EaiUXTzg/FinApp"><img src="imagem/figma.png" alt=""></a>
-                            </div>
-                            </div>
-                
-                            <div class="project-card">
+                          <div class="project-card">
                             <img src="imagem/qreceitas.png" alt="QReceitas" />
                             <h4>QReceitas</h4>
                             <p>Busca de receitas com interface simples e eficaz.</p>
                             <div class="project-links">
-                                <a href="https://www.figma.com/design/NENoZfExtH8VGECYRDjNtD/Qdeli?node-id=0%3A1&t=Ffhpf5RF88eLDzLg-1"><img src="imagem/figma.png" alt=""></a>
-                            </div>                        
+                              <a href="https://www.figma.com/design/NENoZfExtH8VGECYRDjNtD/Qdeli?node-id=0%3A1&t=Ffhpf5RF88eLDzLg-1"><img src="imagem/figma.png" alt=""></a>
+                          </div>                        
                         <!-- <button class="carousel-btn left">←</button>
                         <button class="carousel-btn right">→</button> -->
                       </div>
@@ -138,19 +170,61 @@
               
                   <!-- FRONT-END -->
                 <div class="accordion-item">
-                <button class="accordion-header">Front-End <span class="icons">
-                    <ul>
-                        <li><img src="/imagem/html.png" alt="HTML"></li>
-                        <li><img src="/imagem/css.png" alt="CSS"></li>
-                        <li><img src="/imagem/js.png" alt="JavaScript"></li>
-                        <li><img src="/imagem/reac.png" alt="React"></li>
-                        <li><img src="/imagem/boot.png" alt="Bootstrap"></li>
-                        <li><img src="/imagem/type.png" alt="TypeScript"></li>
-                    </ul>
-                    </span></button>
-                    <div class="accordion-content">
-                        <div class="carousel-wrapper">
-                         
+                  <button class="accordion-header">Front-End 
+                    <span class="icons">
+                      <ul>
+                          <li><img src="/imagem/html.png" alt="HTML"></li>
+                          <li><img src="/imagem/css.png" alt="CSS"></li>
+                          <li><img src="/imagem/js.png" alt="JavaScript"></li>
+                          <li><img src="/imagem/reac.png" alt="React"></li>
+                          <li><img src="/imagem/boot.png" alt="Bootstrap"></li>
+                          <li><img src="/imagem/type.png" alt="TypeScript"></li>
+                      </ul>
+                    </span>
+                  </button> 
+                  <div class="accordion-content">
+                    <div class="education-logos">
+                          <div class="education-card">                                        
+                            <!-- logos da instituições -->  
+                            <a href="https://www.ebac.com.br/"><img src="/imagem/Badge-AluraFlix.png" alt="EBAC">
+                            <div class="certificates-title">
+                            <p>React - Js<br>Oracle Next<br>Education</p></a>
+                          </div>                    
+                        </div>
+                        <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1VTpWGny7_bmjdeKBSZ1gQ5shkpmByAMu/view?usp=sharing"><img src="/imagem/ONE.jpg" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Oracle Cloud<br>Banco de dados</p>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1fK2uZKTq2AJyK2DRuuKns51p8c2XriUn/view?usp=sharing"><img src="/imagem/Badge-AluraGeek.png" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Front-End<br>Oracle Next<br>Education</p> 
+                          </div>
+                          </a>
+                        </div>
+                          <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1tkHD-udz8V1Axs5W_ng6Z_55b4qQSni5/view?usp=sharing"><img src="/imagem/ONE.jpg" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Oracle Cloud<br>Infrastructure</p>
+                          </div>
+                          </a>
+                        </div>                        
+                          <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1WjJ-P1TKK_1dqflBYKQU1w5hpiZWkW0W/view?usp=sharing"><img src="/imagem/Badge-Portfólio.png" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>MySQL<br>Oracle Next<br>Education</p>  
+                          </div>
+                          </a>                                                              
+                        </div>
+                      </div>                      
+                    <div class="carousel-wrapper">                         
                         <div class="carousel">                
                             <div class="project-card">
                             <img src="imagem/aluraflix.png" alt="AluraFlix" />
@@ -212,8 +286,17 @@
                         <li><img src="/imagem/mysql.png" alt="MySQL"></li>
                       </ul>
                     </span>
-                  </button>
+                  </button>    
                   <div class="accordion-content">
+                    <div class="education-logos">
+                          <div class="education-card">                                        
+                            <!-- logos da instituições -->  
+                            <a href="https://brazil.generation.org/"><img src="/imagem/gen.png" alt="EBAC">
+                            <div class="certificates-title">
+                            <p>BootCamp<br> Fullstack Java</p></a>
+                          </div>                    
+                        </div>        
+                    </div>                
                     <div class="carousel-wrapper">
                       <div class="carousel">
 
@@ -249,37 +332,33 @@
                             <a href="https://www.notion.so/seulink/livraria-digital"><img src="imagem/docs.png" alt="Documentação"></a>
                           </div>
                         </div>
-
                       </div>
                     </div>
                   </div>
                 </div>
-             
-                
-              
+
                   <!-- BUSINESS & ANALYTICS -->
                 <div class="accordion-item">
-                    <button class="accordion-header">Business & Analytics <span class="icons">
-                    <ul>
-                        <li><img src="/imagem/ag.png" alt="Power BI"></li>
-                        <li><img src="/imagem/hub.png" alt="Power BI"></li>
-                        
-                    </ul> 
-                    </span></button>
+                    <button class="accordion-header">Business & RPA <span class="icons">
+                      <ul>
+                          <li><img src="/imagem/ag.svg" alt="Power BI"></li>
+                          <li><img src="/imagem/hub.png" alt="Power BI"></li>
+                          <li><img src="/imagem/rpa.png" alt="Power BI"></li>
+                      </ul> 
+                      </span>
+                    </button>
                     <div class="accordion-content">
-                        <div class="carousel-wrapper">
-                            
+                      <div class="education-logos">
+                          <div class="education-card">                                        
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/1JBE35-D_QEAszM9xUNnED_nzcStkoved/view?usp=sharing"><img src="/imagem/logo-enap.png" alt="EBAC">
+                            <div class="certificates-title">
+                            <p>RPA<br>Escola Nacional de<br>Administração Pública</p></a>
+                          </div>                    
+                        </div>
+                      </div>
+                        <div class="carousel-wrapper">                            
                         <div class="carousel">
-
-                          <div class="project-card">
-                            <img src="imagem/mack.png" alt="Projeto CIBERDEM" />
-                            <h4>MackPesquisa - CIBERDEM</h4>
-                            <p> Bolsa de graduação no projeto "Mineração e Visualização de Argumentos de Redes Sociais pesquisador Jr".</p>
-                            <div class="project-links">
-                              <a href="https://ciberdem.mack.com.br/"><img src="imagem/dem.png" alt="Link"></a>
-                            </div>
-                          </div>
-
                           <!-- Business Case: Luma Solar -->
                         <div class="project-card">
                           <img src="imagem/luma.png" alt="Consultoria Luma Solar" />
@@ -331,9 +410,35 @@
                     </ul>                       
                     </span></button>
                     <div class="accordion-content">
+                      <div class="education-logos">
+                          <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://www.mackenzie.br/"><img src="/imagem/mack.png" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Analise e Desenvolvimento<br>de Sistemas - Mackenzie 2026</p> 
+                          </div>
+                          </a>
+                        </div>
+                          <div class="education-card"> 
+                            <!-- logos da instituições -->  
+                            <a href="https://drive.google.com/file/d/15hNz7zejBrFoLi7x_3Hhss19fOpansg1/view?usp=sharing"><img src="/imagem/unices.jpeg" alt="EBAC">
+                            <div class="educaton-title">
+                            <p>Assistente de TI<br>Unicesumar - 2024</p> 
+                          </div>
+                          </a>
+                        </div>
+                      </div>
                         <div class="carousel-wrapper">
-                        
                         <div class="carousel">
+
+                          <div class="project-card">
+                            <img src="imagem/mack.png" alt="Projeto CIBERDEM" />
+                            <h4>MackPesquisa - CIBERDEM</h4>
+                            <p> Bolsa de graduação no projeto "Mineração e Visualização de Argumentos de Redes Sociais pesquisador Jr".</p>
+                            <div class="project-links">
+                              <a href="https://ciberdem.mack.com.br/"><img src="imagem/dem.png" alt="Link"></a>
+                            </div>
+                          </div>
               
                         <div class="project-card">
                           <img src="imagem/carregandos.jpg" alt="Projeto IA Python" />
@@ -363,10 +468,38 @@
                       
     </container>
     </main>
-    <footer>
-        <h4 class="foot">Desenvolvido por Carlos Moroni Garcia<br>2024</h4>
-    </footer>
-    <!-- <a href="#nav"><img id="sobe" src="imagem/anterior.png" alt="sobe"></a> -->
+    <footer id="contato" class="portfolio-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>Carlos Moroni Garcia</h3>
+            <p>Desenvolvedor Full Stack Jr <br> Pesquisador Jr <br>& Designer</p>
+        </div>
+        
+        <div class="footer-links">
+            <a href="#inicio" class="footer-link">Sobre</a>
+            <a href="#projetos" class="footer-link">Projetos</a>
+            <a href="#contato" class="footer-link">Contato</a>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://github.com/carlosmoronisud" target="_blank" class="social-icon">
+                <img src="imagem/git.png" alt="GitHub">
+            </a>
+            <a href="www.linkedin.com/in/carlosmoronigarcia" target="_blank" class="social-icon">
+                <img src="imagem/in.png" alt="LinkedIn">
+            </a>
+            <a href=https://drive.google.com/file/d/1NLf638HKMwecBZCgctCeHwaHUdHBfWdF/view?usp=sharing" class="social-icon">
+                <img src="imagem/cv.png" alt="Email">
+            </a>            
+        </div>
+        
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2024 Carlos Moroni Garcia. Todos os direitos reservados.<br>carlosmoronisud@gmail.com</p>
+        <p class="footer-message">Construído com ♥ e muito código</p>
+    </div>
+
 </cotainer>
 <script src="script/carrocel.js"></script>
 <script src="script/backToTop.js"></script>
