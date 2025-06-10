@@ -9,8 +9,9 @@
     --highlight: #E0E0E0;
     --dark-gray: #1a1a1a;
     --medium-gray: #252525;
-    --light-gray: #aaa;
-    --purple-shadow: rgba(218, 0, 255, 0.1);
+    --light-gray: #36d8e4;
+    --purple-shadow: #DA00FF;
+    --border-gray: #333; 
 }
 
 /* --- Base Styles & Reset (Minimal for main.css, assuming a global reset) --- */
@@ -36,14 +37,11 @@ a {
 /* --- Main Content - About Section --- */
 
 section {
-    padding: 2rem;
-   
+    padding: 2rem;   
     display: flex;
     justify-content: center;
     align-items: flex-start; 
 }
-
-
 /* About Content Box */
 .aboContent {
     background-color: var(--dark-gray);
@@ -53,7 +51,7 @@ section {
     border-radius: 12px;
     padding: 2rem;
     position: relative;
-    box-shadow: 0 0 20px var(--text-purple);
+    box-shadow: 0 0 20px var(--text-purple);    
     font-family: 'Segoe UI', sans-serif;
     flex-grow: 1;   
 }
@@ -69,6 +67,7 @@ section {
 
 .aboIntro,
 .aboFinal {
+    letter-spacing: 1px;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -77,7 +76,8 @@ section {
 /* Highlighted Text */
 .aboIntro em,
 .aboFinal em {
-    color: var(--text-purple);
+    text-decoration: underline;
+    color: #e9a5f5;
 }
 
 /* Bullet List (if used in HTML) */
@@ -125,11 +125,11 @@ section {
     margin-top: 2rem;
 }
 
-.skills-projects { /* Inner container for the accordion */
+.skills-projects { 
     max-width: 1200px;
    
     margin: 0 auto;
-    padding: 0 1rem; /* Horizontal padding for spacing */
+    padding: 0 1rem; 
 }
 
 /* Accordion General Styles */
@@ -152,9 +152,9 @@ section {
     cursor: pointer;
     padding: 1.2rem;
     border: none;
-    font-size: 1.3rem;
+    font-size: 2rem;
     display: flex;
-    flex-direction: column; /* Stack text and icons vertically */
+    flex-direction: column; 
     gap: 0.8rem;
     margin: 0;
     transition: all 0.3s ease;
@@ -212,7 +212,7 @@ section {
 .accordion-education {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Layout education cards horizontally */
+    flex-direction: row; 
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -232,7 +232,7 @@ section {
 }
 .education-logos {
     display: flex;
-    flex-direction: row; /* Layout logos horizontally */
+    flex-direction: row; 
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -267,17 +267,17 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1rem; /* Adjust padding as needed */
-    max-height: 0; /* Starts hidden */
+    padding: 0 1rem; 
+    max-height: 0; 
     overflow: hidden;
-    transition: max-height 0.5s ease; /* Smooth reveal */
+    transition: max-height 0.5s ease; 
     gap: 1rem;
     background-color: var(--dark-gray);
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 1000px; /* Large enough to show content, adjust if necessary */
-    padding: 1rem; /* Apply padding when active */
+    max-height: 1000px; 
+    padding: 1rem; 
 }
 
 /* Carousel Specific Styles */
@@ -289,29 +289,29 @@ section {
 
 .carousel {
     display: flex;
-    gap: 1.5rem; /* Space between project cards */
-    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 1.5rem; 
+    overflow-x: auto; 
     scroll-behavior: smooth;
-    padding: 1rem 0; /* Padding around the scrolling content */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-    align-items: stretch; /* Ensure cards stretch to fill height */
+    padding: 1rem 0; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    align-items: stretch; 
 }
 
 .carousel::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+    display: none; 
 }
 
 .project-card {
     background-color: var(--medium-gray);
     padding: 1.2rem;
     border-radius: 12px;
-    flex-shrink: 0; /* Crucial: Prevents cards from shrinking, forcing scroll */
+    flex-shrink: 0; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute space within the card */
+    justify-content: space-between; 
 }
 
 .project-card:hover {
