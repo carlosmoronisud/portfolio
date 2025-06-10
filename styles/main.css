@@ -396,11 +396,11 @@ section {
 
     /* Accordion header adjustments */
     .accordion-header {        
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 1rem;
     }
     .accordion-header::after {
-        right: 2rem;
+        right: 1.8rem;
     }
 
     /* Education logo adjustments */
@@ -416,7 +416,7 @@ section {
     /* Project card for mobile carousel */
     .project-card {
         min-width: 280px; 
-        width: calc(100% - 3rem);
+        width: calc(100% - 2rem);
         margin-right: 1rem; 
     }
     .carousel {
