@@ -61,6 +61,7 @@ const translations = {
         eduMySQLONE: "MySQL<br>Oracle Next<br>Education",
         eduBootcampJava: "BootCamp<br> Fullstack Java",
         eduADS: "Analise e Desenvolvimento<br>de Sistemas - Mackenzie 2026",
+        eduRPA: "RPA<br>Escola Nacional de<br>Administração Pública", // Corrected key to match HTML ID
         eduAssistenteTI: "Assistente de TI<br>Unicesumar - 2024",
 
         // Footer Text
@@ -131,6 +132,7 @@ const translations = {
         eduMySQLONE: "MySQL<br>Oracle Next<br>Education",
         eduBootcampJava: "Fullstack Java<br>BootCamp",
         eduADS: "Analysis and Development<br>of Systems - Mackenzie 2026",
+        eduRPA: "RPA - Robotic Process Automation<br>National Administration School - 2024", // Corrected key to match HTML ID
         eduAssistenteTI: "IT Assistant<br>Unicesumar - 2024",
 
         // Footer Text
@@ -201,6 +203,7 @@ const translations = {
         eduMySQLONE: "MySQL<br>Oracle Next<br>Education",
         eduBootcampJava: "BootCamp<br> Fullstack Java",
         eduADS: "Análisis y Desarrollo<br>de Sistemas - Mackenzie 2026",
+        eduRPA: "RPA - Automatización Robótica de Procesos<br>Escuela Nacional de Administración - 2024", // Corrected key to match HTML ID
         eduAssistenteTI: "Asistente de TI<br>Unicesumar - 2024",
 
         // Footer Text
@@ -227,130 +230,79 @@ function applyTranslations() {
     `;
 
     // About Section
-    document.querySelector('.aboIntro').innerHTML = lang.aboIntro;
-    document.querySelector('.aboFinal').innerHTML = lang.aboFinal;
+    document.getElementById('aboIntro').innerHTML = lang.aboIntro;
+    document.getElementById('aboFinal').innerHTML = lang.aboFinal;
 
     // Accordion Headers (Skills/Projects)
-    // Design
-    document.querySelectorAll('.accordion-header')[0].childNodes[0].nodeValue = lang.designHeader + ' ';
-    // Front-End
-    document.querySelectorAll('.accordion-header')[1].childNodes[0].nodeValue = lang.frontendHeader + ' ';
-    // Back-End
-    document.querySelectorAll('.accordion-header')[2].childNodes[0].nodeValue = lang.backendHeader + ' ';
-    // Business & RPA
-    document.querySelectorAll('.accordion-header')[3].childNodes[0].nodeValue = lang.businessRPAHeader + ' ';
-    // Data Science & IA
-    document.querySelectorAll('.accordion-header')[4].childNodes[0].nodeValue = lang.dataScienceAIHeader + ' ';
+    document.getElementById('designHeader').childNodes[0].nodeValue = lang.designHeader + ' ';
+    document.getElementById('frontendHeader').childNodes[0].nodeValue = lang.frontendHeader + ' ';
+    document.getElementById('backendHeader').childNodes[0].nodeValue = lang.backendHeader + ' ';
+    document.getElementById('businessRPAHeader').childNodes[0].nodeValue = lang.businessRPAHeader + ' ';
+    document.getElementById('dataScienceAIHeader').childNodes[0].nodeValue = lang.dataScienceAIHeader + ' ';
 
 
-    // Education Titles
-    document.querySelector('.accordion-education .education-card:nth-child(1) .certificates-title p').innerHTML = lang.eduUXUIDesign;
-    document.querySelector('.accordion-education .education-card:nth-child(2) .educaton-title p').innerHTML = lang.eduFigmaAplicado;
-    document.querySelector('.accordion-education .education-card:nth-child(3) .educaton-title p').innerHTML = lang.eduInteligenciaArtificial;
-    document.querySelector('.accordion-education .education-card:nth-child(4) .educaton-title p').innerHTML = lang.eduPhotoshopAplicado;
-
-    // Front-End Education
-    const frontendEduCards = document.querySelectorAll('.accordion-item:nth-child(2) .accordion-education .education-card .educaton-title p');
-    if (frontendEduCards[0]) frontendEduCards[0].innerHTML = lang.eduReactJS;
-    if (frontendEduCards[1]) frontendEduCards[1].innerHTML = lang.eduOracleCloudDB;
-    if (frontendEduCards[2]) frontendEduCards[2].innerHTML = lang.eduFrontendONE;
-    if (frontendEduCards[3]) frontendEduCards[3].innerHTML = lang.eduOracleCloudInfra;
-    if (frontendEduCards[4]) frontendEduCards[4].innerHTML = lang.eduMySQLONE;
-
-    // Back-End Education
-    const backendEduCards = document.querySelectorAll('.accordion-item:nth-child(3) .accordion-education .education-card .certificates-title p');
-    if (backendEduCards[0]) backendEduCards[0].innerHTML = lang.eduBootcampJava;
-
-    // Data Science & AI Education
-    const dataScienceEduCards = document.querySelectorAll('.accordion-item:nth-child(5) .accordion-education .education-card .educaton-title p');
-    if (dataScienceEduCards[0]) dataScienceEduCards[0].innerHTML = lang.eduADS;
-    if (dataScienceEduCards[1]) dataScienceEduCards[1].innerHTML = lang.eduAssistenteTI;
+    // Education Titles - Now directly using IDs
+    document.getElementById('eduUXUIDesign').innerHTML = lang.eduUXUIDesign;
+    document.getElementById('eduFigmaAplicado').innerHTML = lang.eduFigmaAplicado;
+    document.getElementById('eduInteligenciaArtificial').innerHTML = lang.eduInteligenciaArtificial;
+    document.getElementById('eduPhotoshopAplicado').innerHTML = lang.eduPhotoshopAplicado;
+    document.getElementById('eduReactJS').innerHTML = lang.eduReactJS;
+    document.getElementById('eduOracleCloudDB').innerHTML = lang.eduOracleCloudDB;
+    document.getElementById('eduFrontendONE').innerHTML = lang.eduFrontendONE;
+    document.getElementById('eduOracleCloudInfra').innerHTML = lang.eduOracleCloudInfra;
+    document.getElementById('eduMySQLONE').innerHTML = lang.eduMySQLONE;
+    document.getElementById('eduBootcampJava').innerHTML = lang.eduBootcampJava;
+    document.getElementById('eduRPA').innerHTML = lang.eduRPA; // Directly targeting the RPA element
+    document.getElementById('eduADS').innerHTML = lang.eduADS; // Directly targeting the ADS element
+    document.getElementById('eduAssistenteTI').innerHTML = lang.eduAssistenteTI; // Directly targeting the IT Assistant element
 
 
-    // Projects (needs more robust handling for dynamic projects,
-    // but for fixed content, direct selection works)
-    // Design Projects
-    document.querySelector('.project-card:nth-child(1) h4').innerHTML = lang.itauAssisTitle;
-    document.querySelector('.project-card:nth-child(1) p').innerHTML = lang.itauAssisDesc;
-    document.querySelector('.project-card:nth-child(2) h4').innerHTML = lang.finnAppTitle;
-    document.querySelector('.project-card:nth-child(2) p').innerHTML = lang.finnAppDesc;
-    document.querySelector('.project-card:nth-child(3) h4').innerHTML = lang.qReceitasTitle;
-    document.querySelector('.project-card:nth-child(3) p').innerHTML = lang.qReceitasDesc;
+    // Projects (using IDs where possible)
+    document.getElementById('itauAssisTitle').innerHTML = lang.itauAssisTitle;
+    document.getElementById('itauAssisDesc').innerHTML = lang.itauAssisDesc;
+    document.getElementById('finnAppTitle').innerHTML = lang.finnAppTitle;
+    document.getElementById('finnAppDesc').innerHTML = lang.finnAppDesc;
+    document.getElementById('qreceitasTitle').innerHTML = lang.qReceitasTitle;
+    document.getElementById('qreceitasDesc').innerHTML = lang.qReceitasDesc;
 
-    // Front-End Projects (assuming they start from the 4th project card overall, or 1st in their carousel)
-    // This part requires careful indexing or specific class names for accuracy.
-    // For now, I'm assuming the nth-child logic applies to the overall project-card list.
-    // It's safer to add unique IDs or more specific classes to project cards if you want precise targeting.
-    const frontendProjects = document.querySelectorAll('.accordion-item:nth-child(2) .carousel .project-card');
-    if(frontendProjects[0]) {
-        frontendProjects[0].querySelector('h4').innerHTML = lang.aluraFlixTitle;
-        frontendProjects[0].querySelector('p').innerHTML = lang.aluraFlixDesc;
-    }
-    if(frontendProjects[1]) {
-        frontendProjects[1].querySelector('h4').innerHTML = lang.larconTitle;
-        frontendProjects[1].querySelector('p').innerHTML = lang.larconDesc;
-    }
-    if(frontendProjects[2]) {
-        frontendProjects[2].querySelector('h4').innerHTML = lang.aluraGeekTitle;
-        frontendProjects[2].querySelector('p').innerHTML = lang.aluraGeekDesc;
-    }
-    if(frontendProjects[3]) {
-        frontendProjects[3].querySelector('h4').innerHTML = lang.decodTextTitle;
-        frontendProjects[3].querySelector('p').innerHTML = lang.decodTextDesc;
-    }
+    document.getElementById('aluraflixTitle').innerHTML = lang.aluraFlixTitle;
+    document.getElementById('aluraflixDesc').innerHTML = lang.aluraFlixDesc;
+    document.getElementById('larconTitle').innerHTML = lang.larconTitle;
+    document.getElementById('larconDesc').innerHTML = lang.larconDesc;
+    // Assuming Alura Geek and Decodificador also need IDs for direct targeting
+    // document.getElementById('aluraGeekTitle').innerHTML = lang.aluraGeekTitle;
+    // document.getElementById('aluraGeekDesc').innerHTML = lang.aluraGeekDesc;
+    // document.getElementById('decodTitle').innerHTML = lang.decodTextTitle;
+    // document.getElementById('decodDesc').innerHTML = lang.decodTextDesc;
 
-    // Back-End Projects
-    const backendProjects = document.querySelectorAll('.accordion-item:nth-child(3) .carousel .project-card');
-    if(backendProjects[0]) {
-        backendProjects[0].querySelector('h4').innerHTML = lang.farmaciaCRUDTitle;
-        backendProjects[0].querySelector('p').innerHTML = lang.farmaciaCRUDDesc;
-    }
-    if(backendProjects[1]) {
-        backendProjects[1].querySelector('h4').innerHTML = lang.contaBancariaTitle;
-        backendProjects[1].querySelector('p').innerHTML = lang.contaBancariaDesc;
-    }
-    if(backendProjects[2]) {
-        backendProjects[2].querySelector('h4').innerHTML = lang.livrariaDigitalTitle;
-        backendProjects[2].querySelector('p').innerHTML = lang.livrariaDigitalDesc;
-    }
+    document.getElementById('farmaciaTitle').innerHTML = lang.farmaciaCRUDTitle;
+    document.getElementById('farmaciaDesc').innerHTML = lang.farmaciaCRUDDesc;
+    document.getElementById('bancoTitle').innerHTML = lang.contaBancariaTitle;
+    document.getElementById('bancoDesc').innerHTML = lang.contaBancariaDesc;
+    document.getElementById('livrariaTitle').innerHTML = lang.livrariaDigitalTitle;
+    document.getElementById('livrariaDesc').innerHTML = lang.livrariaDigitalDesc;
 
-    // Business & RPA Projects
-    const businessProjects = document.querySelectorAll('.accordion-item:nth-child(4) .carousel .project-card');
-    if(businessProjects[0]) {
-        businessProjects[0].querySelector('h4').innerHTML = lang.lumaSolarTitle;
-        businessProjects[0].querySelector('p').innerHTML = lang.lumaSolarDesc;
-    }
-    if(businessProjects[1]) {
-        businessProjects[1].querySelector('h4').innerHTML = lang.banVicTitle;
-        businessProjects[1].querySelector('p').innerHTML = lang.banVicDesc;
-    }
-    if(businessProjects[2]) {
-        businessProjects[2].querySelector('h4').innerHTML = lang.northwindTitle;
-        businessProjects[2].querySelector('p').innerHTML = lang.northwindDesc;
-    }
+    document.getElementById('lumaTitle').innerHTML = lang.lumaSolarTitle;
+    document.getElementById('lumaDesc').innerHTML = lang.lumaSolarDesc;
+    document.getElementById('banvicTitle').innerHTML = lang.banVicTitle;
+    document.getElementById('banvicDesc').innerHTML = lang.banVicDesc;
+    document.getElementById('northwindTitle').innerHTML = lang.northwindTitle;
+    document.getElementById('northwindDesc').innerHTML = lang.northwindDesc;
 
-    // Data Science & AI Projects
-    const dataScienceProjects = document.querySelectorAll('.accordion-item:nth-child(5) .carousel .project-card');
-    if(dataScienceProjects[0]) {
-        dataScienceProjects[0].querySelector('h4').innerHTML = lang.mackPesquisaTitle;
-        dataScienceProjects[0].querySelector('p').innerHTML = lang.mackPesquisaDesc;
-    }
-    if(dataScienceProjects[1]) {
-        dataScienceProjects[1].querySelector('h4').innerHTML = lang.iaEducacionalTitle;
-        dataScienceProjects[1].querySelector('p').innerHTML = lang.iaEducacionalDesc;
-    }
-    if(dataScienceProjects[2]) {
-        dataScienceProjects[2].querySelector('h4').innerHTML = lang.modeloChurnTitle;
-        dataScienceProjects[2].querySelector('p').innerHTML = lang.modeloChurnDesc;
-    }
+    document.getElementById('ciberdemTitle').innerHTML = lang.mackPesquisaTitle;
+    document.getElementById('ciberdemDesc').innerHTML = lang.mackPesquisaDesc;
+    document.getElementById('iaPythonTitle').innerHTML = lang.iaEducacionalTitle;
+    document.getElementById('iaPythonDesc').innerHTML = lang.iaEducacionalDesc;
+    document.getElementById('modeloChurnTitle').innerHTML = lang.modeloChurnTitle;
+    document.getElementById('modeloChurnDesc').innerHTML = lang.modeloChurnDesc;
 
     // Footer
-    document.querySelector('.footer-brand p').innerHTML = lang.footerRole;
-    document.querySelector('.footer-links a:nth-child(1)').innerHTML = lang.footerAbout;
-    document.querySelector('.footer-links a:nth-child(2)').innerHTML = lang.footerProjects;
-    document.querySelector('.footer-links a:nth-child(3)').innerHTML = lang.footerContact;
-    document.querySelector('.footer-bottom p:nth-child(1)').innerHTML = lang.footerRights;
-    document.querySelector('.footer-message').innerHTML = lang.footerMessage;
+    document.getElementById('footerRole').innerHTML = lang.footerRole;
+    document.getElementById('footerAbout').innerHTML = lang.footerAbout;
+    document.getElementById('footerProjects').innerHTML = lang.footerProjects;
+    document.getElementById('footerContact').innerHTML = lang.footerContact;
+    document.getElementById('footerRights').innerHTML = lang.footerRights;
+    document.getElementById('footerMessage').innerHTML = lang.footerMessage;
 
 
     // Update active button class
