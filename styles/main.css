@@ -1,85 +1,426 @@
-section {    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-dark: #0A0C1A;
+    --text-purple: #DA00FF;
+    --highlight: #E0E0E0;
+    --dark-gray: #1a1a1a;
+    --medium-gray: #252525;
+    --light-gray: #aaa;
+    --purple-shadow: rgba(218, 0, 255, 0.1);
+}
+
+/* --- Base Styles & Reset (Minimal for main.css, assuming a global reset) --- */
+body {
+    font-family: 'Courier New', sans-serif;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #12152E 50%, #1C1A2B 100%);
+    color: var(--text-purple);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--highlight);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* --- Main Content - About Section --- */
+
+section {
     padding: 2rem;
+   
     display: flex;
     justify-content: center;
-  }  
-  .aboContent {
-    background-color: #1a1a1a; /* caixa interna mais escura */
-    color: #E0E0E0;
-    max-width: 900px;
+    align-items: flex-start; 
+}
+
+
+/* About Content Box */
+.aboContent {
+    background-color: var(--dark-gray);
+    color: var(--highlight);
+    width: 100%;
+    max-width: 1200px;
     border-radius: 12px;
-    padding:  2rem;
+    padding: 2rem;
     position: relative;
-    box-shadow: 0 0 20px #DA00FF;
+    box-shadow: 0 0 20px var(--text-purple);
     font-family: 'Segoe UI', sans-serif;
-  }  
-  /* Parágrafos */
-  .aboIntro::before {
+    flex-grow: 1;   
+}
+
+/* Paragraphs with Emojis */
+.aboIntro::before {
     content: "💡 ";
-  }
-  .aboFinal::before {
+}
+
+.aboFinal::before {
     content: "🚀 ";
-  }  
-  .aboIntro,
-  .aboFinal {
+}
+
+.aboIntro,
+.aboFinal {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-  }
-  
-  /* Lista com emojis */
-  .bulletList {
+}
+
+/* Highlighted Text */
+.aboIntro em,
+.aboFinal em {
+    color: var(--text-purple);
+}
+
+/* Bullet List (if used in HTML) */
+.bulletList { 
     list-style: none;
     padding-left: 0;
     margin-bottom: 2rem;
-  }
-  .bulletList li::before {
+}
+
+.bulletList li::before {
     content: "✔️ ";
     margin-right: 0.5rem;
-  }
-  .bulletList li {
+}
+
+.bulletList li {
     margin-bottom: 0.8rem;
-  }
-  
-  /* Links sociais como barra lateral */
-  .links {
-    position: relative;
-    z-index: 1;
-    left: 0rem;
-    background: linear-gradient(135deg, #0A0C1A 0%, #12152E 50%, #1C1A2B 100%);
-    border-radius: 10px;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    gap: 0.5rem;
-    box-shadow: 0 0 10px #DA00FF;
-  }
-  .links ul {
+}
+
+/* Social Links Sidebar */
+
+.links ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0  1vw 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-  }
-  
-  .links ul li a {
-    display: block;
-    width: 32px;
-    height: 32px;    
-  }
-  
-  .links ul li img {
-    width: 100%;
-    height: 100%;
+    justify-content:space-around;    
+    gap: 1rem; 
+    border-bottom: solid 1px var(--text-purple);
+}
+.links ul li img {
+    width: 6vw;
+    height: 6vh;
     object-fit: contain;
     border-radius: 6px;
     transition: transform 0.2s ease;
-  }  
-  .links ul li img:hover {
+}
+
+.links ul li img:hover {
     transform: scale(1.1);
-  }
-  
+}
+
+/* --- Projects and Skills Section --- */
+.prjects {   
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.skills-projects { /* Inner container for the accordion */
+    max-width: 1200px;
+   
+    margin: 0 auto;
+    padding: 0 1rem; /* Horizontal padding for spacing */
+}
+
+/* Accordion General Styles */
+.accordion-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.accordion-item {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--dark-gray);
+    box-shadow: 0 2px 6px var(--text-purple);
+}
+
+/* Accordion Header */
+.accordion-header {
+    cursor: pointer;
+    padding: 1.2rem;
+    border: none;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column; /* Stack text and icons vertically */
+    gap: 0.8rem;
+    margin: 0;
+    transition: all 0.3s ease;
+    color: var(--highlight);
+    background-color: var(--dark-gray);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: var(--text-purple);
+    color: var(--dark-gray);
+}
+
+/* Accordion Toggle Icon */
+.accordion-header::after {
+    content: "▼";
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.accordion-item.active .accordion-header::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Accordion Tools (Icons next to header text) */
+.icons ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.icons ul img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.icons ul img:hover {
+    transform: scale(1.1);
+}
+
+/* Accordion Education (Certificates/Institutions) */
+.accordion-education {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Layout education cards horizontally */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.education-card a {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.education-card a:hover {
+    background-color: var(--text-purple);
+}
+.education-logos {
+    display: flex;
+    flex-direction: row; /* Layout logos horizontally */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.education-logos img {
+    height: 100px;
+    width: auto;
+    max-width: 100px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.education-title {
+    max-width: 100px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-top: 8px;
+    color: var(--highlight);
+}
+
+.education-logos img:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Accordion Content (Projects Carousel) */
+.accordion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem; /* Adjust padding as needed */
+    max-height: 0; /* Starts hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Smooth reveal */
+    gap: 1rem;
+    background-color: var(--dark-gray);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px; /* Large enough to show content, adjust if necessary */
+    padding: 1rem; /* Apply padding when active */
+}
+
+/* Carousel Specific Styles */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 1.5rem; /* Space between project cards */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth;
+    padding: 1rem 0; /* Padding around the scrolling content */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    align-items: stretch; /* Ensure cards stretch to fill height */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+.project-card {
+    background-color: var(--medium-gray);
+    padding: 1.2rem;
+    border-radius: 12px;
+    flex-shrink: 0; /* Crucial: Prevents cards from shrinking, forcing scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space within the card */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(218, 0, 255, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.project-card h4 {
+    margin: 0.5rem 0;
+    color: var(--highlight);
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    margin: 0.5rem 0 1rem;
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    flex-grow: 1; 
+}
+
+.project-links {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-top: auto; 
+}
+
+.project-links a img {
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.project-links a:hover img {
+    transform: scale(1.1);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 1200px) { 
+    .project-card {
+        width: calc((100% / 3) - (2 * 1.5rem / 3)); /
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) { 
+    .project-card {
+        width: calc((100% / 2) - (1.5rem / 2)); 
+    }
+}
+
+@media (max-width: 768px) { 
+    section {
+        padding: 1rem; 
+    }
+    .container {
+        flex-direction: column;
+    }
+    .links {
+        flex-direction: row;
+        width: fit-content; 
+        padding: 0.8rem 1.5rem; 
+        margin-bottom: 1.5rem;
+    }
+    .links ul {
+        flex-direction: row;
+        height: auto;
+        gap: 1.5rem;
+    }
+    .links ul li a {
+        width: 28px; 
+        height: 28px;
+    }
+
+    /* Accordion header adjustments */
+    .accordion-header {
+        
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    .accordion-header::after {
+        right: 1rem;
+    }
+
+    /* Education logo adjustments */
+    .education-logos img {
+        height: 60px;
+        max-width: 60px;
+    }
+    .education-title {
+        max-width: 60px;
+        font-size: 0.8rem;
+    }
+
+    /* Project card for mobile carousel */
+    .project-card {
+        min-width: 280px; 
+        width: calc(100% - 2rem);
+        margin-right: 1rem; 
+    }
+    .carousel {
+        padding: 1rem; 
+    }
+}

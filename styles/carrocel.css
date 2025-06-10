@@ -1,269 +1,129 @@
-/* Estilos Gerais do Accordion */
-.accordion-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* Variables - Ensure these are consistent across all your CSS files,
+   or ideally defined in a single, shared 'variables.css' if you create one. */
+:root {
+    --medium-gray: #252525;
+    --highlight: #E0E0E0;
+    --text-purple: #DA00FF;
+    --light-gray: #aaa;
 }
 
-.accordion-item {
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    box-shadow: 0 2px 6px #DA00FF;
-}
+/* --- Carousel Specific Styles --- */
 
-/* Cabeçalho do Accordion */
-.accordion-header {
-    cursor: pointer;
-    padding: 1.2rem;
-    border: none;
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin: 0;
-    transition: all 0.3s ease;
-    color: #E0E0E0;
-    background-color: #1a1a1a;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-.accordion-header:hover {
-    background-color: #DA00FF;
-    color: #1a1a1a;
-}
-
-.accordion-header::after {
-    content: "▼";
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(0deg);
-    transition: transform 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.accordion-item.active .accordion-header::after {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-/* Seção de Ferramentas */
-.accordion-tools {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.icons ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-}
-
-.icons ul img {
-    width: 2rem;
-    height: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.icons ul img:hover {
-    transform: scale(1.1);
-}
-
-/* Seção de Formações */
-.accordion-education {
-    width: 100%;
-    display: flex; 
-    flex-direction: column;      
-    align-items: center;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
-}
-.education-logos {
-    display: flex;    
-    flex-direction: wrap;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-.education-card a {
-  border-radius: 12px;
-}
-.education-card a:hover  {
-    background-color:  #DA00FF;
-}
-a {
-    text-decoration: none;
-    color: #E0E0E0;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.education-logos img {
-    height: 100px;
-    max-width: 100%;    
-    opacity: 0.9;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-}
-.education-title {
-  max-width: 100px; /* garante que o título não ultrapasse a imagem */
-  text-align: center;
-  word-wrap: break-word; /* força quebra de palavras longas */
-  overflow-wrap: break-word;
-  margin-top: 8px;
-}
-.education-logos img:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-
-
-/* Conteúdo do Accordion */
-.accordion-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    gap: 1rem;
-    background-color: #1a1a1a;
-}
-
-.accordion-item.active .accordion-content {
-    max-height: 1000px;
-    padding: 1rem;
-}
-
-/* Carrossel de Projetos */
+/* Wrapper for the carousel to manage overflow and positioning */
 .carousel-wrapper {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Hides parts of cards that are not in view */
 }
 
+/* The carousel container itself, enabling horizontal scrolling */
 .carousel {
     display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 1rem 0;
-    scrollbar-width: none; /* Firefox */
+    gap: 1.5rem; /* Space between project cards */
+    overflow-x: auto; /* Enables horizontal scrolling when content overflows */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 1rem 0; /* Vertical padding for content */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    align-items: stretch; /* Ensures cards stretch to fill height consistently */
 }
 
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Opera) */
 .carousel::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
+/* Individual project card styling */
 .project-card {
-    background-color: #252525;
+    background-color: var(--medium-gray);
     padding: 1.2rem;
     border-radius: 12px;
-    min-width: 280px;
+    flex-shrink: 0; /* **Crucial:** Prevents cards from shrinking below their defined width,
+                       forcing the carousel to scroll if necessary. */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    display: flex; /* Enables flexbox within the card for content layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: space-between; /* Distributes space between card elements,
+                                       pushing links to the bottom. */
 }
 
+/* Hover effect for project cards */
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(218, 0, 255, 0.3);
+    transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 6px 12px rgba(218, 0, 255, 0.3); /* Adds a stronger shadow with purple highlight */
 }
 
+/* Styling for project images within cards */
 .project-card img {
     width: 100%;
+    height: 180px; /* Fixed height for consistent image presentation */
+    object-fit: cover; /* Ensures the image covers the area, cropping if needed */
     border-radius: 8px;
     margin-bottom: 0.8rem;
 }
 
+/* Styling for project titles */
 .project-card h4 {
     margin: 0.5rem 0;
-    color: #E0E0E0;
+    color: var(--highlight);
     font-size: 1.1rem;
 }
 
+/* Styling for project descriptions */
 .project-card p {
     margin: 0.5rem 0 1rem;
-    color: #aaa;
+    color: var(--light-gray);
     font-size: 0.9rem;
+    flex-grow: 1; /* Allows the paragraph to grow and push links to the bottom */
 }
 
+/* Container for project links (GitHub, Demo, Figma) */
 .project-links {
     display: flex;
     gap: 0.8rem;
+    justify-content: center; /* Centers the links horizontally within the card */
+    margin-top: auto; /* Pushes the links to the very bottom of the card */
 }
 
+/* Styling for project link icons */
 .project-links a img {
     width: 1.8rem;
     height: 1.8rem;
     transition: transform 0.3s ease;
 }
 
+/* Hover effect for project link icons */
 .project-links a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
 
-/* Botões de Navegação do Carrossel */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(218, 0, 255, 0.7);
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
+/* --- Responsive Adjustments for Carousel Display --- */
 
-.carousel-btn:hover {
-    opacity: 1;
-    background-color: #DA00FF;
-}
-
-.carousel-btn.left {
-    left: 0;
-}
-
-.carousel-btn.right {
-    right: 0;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .accordion-header {
-        font-size: 1.1rem;
-        padding: 1rem;
-    }
-    
-    .accordion-header::after {
-        right: 1rem;
-    }
-    
-    .education-logos img {
-        height: 24px;
-    }
-    
+/* Desktop (min-width: 1200px): Display 3 projects in the main viewport */
+@media (min-width: 1200px) {
     .project-card {
-        min-width: 240px;
+        /* Calculates width for 3 cards, accounting for 2 gaps (1.5rem each) */
+        width: calc((100% / 3) - (2 * 1.5rem / 3));
+    }
+}
+
+/* Medium Desktops/Laptops (min-width: 769px and max-width: 1199px): Display 2 projects */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .project-card {
+        /* Calculates width for 2 cards, accounting for 1 gap (1.5rem) */
+        width: calc((100% / 2) - (1.5rem / 2));
+    }
+}
+
+/* Mobile and Smaller Tablets (max-width: 768px): Single project carousel */
+@media (max-width: 768px) {
+    .project-card {
+        min-width: 280px; /* Ensures a minimum readable width for each card */
+        width: calc(100% - 2rem); /* Cards take up almost full width, leaving 1rem padding on each side */
+        margin-right: 1rem; /* Adds space between cards when scrolling horizontally */
+    }
+    .carousel {
+        padding: 1rem; /* Adjusts padding around the scrolling carousel for mobile */
     }
 }

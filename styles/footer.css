@@ -1,195 +1,115 @@
+/* Variables - Ensure these are consistent across all your CSS files,
+   or ideally defined in a single, shared 'variables.css' if you create one. */
+:root {
+    --dark-gray: #1a1a1a;
+    --highlight: #E0E0E0;
+    --text-purple: #DA00FF;
+    --light-gray: #aaa;
+    --border-gray: #333; /* For footer bottom border */
+    --text-muted: #888; /* For footer bottom text */
+    --purple-shadow: rgba(218, 0, 255, 0.1);
+}
+
+/* --- Footer Styles --- */
 .portfolio-footer {
-    background-color: #1a1a1a;
-    color: #E0E0E0;
-    padding: 2.5rem 1rem 1rem;
-    margin-top: 3rem;
-    border-top: 1px solid #DA00FF;
-    box-shadow: 0 -5px 15px rgba(218, 0, 255, 0.1);
+    background-color: var(--dark-gray);
+    color: var(--highlight);
+    padding: 2.5rem 1rem 1rem; /* Top, horizontal, bottom padding */
+    margin-top: 3rem; /* Space from the content above */
+    border-top: 1px solid var(--text-purple); /* Top border for visual separation */
+    box-shadow: 0 -5px 15px var(--purple-shadow); /* Shadow above the footer */
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding-bottom: 1.5rem;
+    max-width: 1200px; /* Max width for content alignment */
+    margin: 0 auto; /* Center the content */
+    display: grid; /* Use CSS Grid for flexible layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between grid items */
+    padding-bottom: 1.5rem; /* Padding at the bottom of the main content area */
 }
 
+/* Footer Brand/Title Section */
 .footer-brand h3 {
-    color: #DA00FF;
+    color: var(--text-purple);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .footer-brand p {
-    color: #aaa;
+    color: var(--light-gray);
     font-size: 0.9rem;
 }
 
+/* Footer Navigation Links */
 .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: column; /* Stack links vertically */
+    gap: 0.8rem; /* Space between links */
 }
 
 .footer-link {
-    color: #E0E0E0;
+    color: var(--highlight);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth hover effect */
     font-size: 0.95rem;
 }
 
 .footer-link:hover {
-    color: #DA00FF;
+    color: var(--text-purple); /* Highlight color on hover */
 }
 
+/* Footer Social Icons */
 .footer-social {
     display: flex;
-    gap: 1.2rem;
-    align-items: flex-start;
+    gap: 1.2rem; /* Space between social icons */
+    align-items: flex-start; /* Align icons to the top */
 }
 
 .social-icon img {
     width: 24px;
     height: 24px;
-    opacity: 0.8;
-    transition: all 0.3s ease;
+    opacity: 0.8; /* Slightly desaturated by default */
+    transition: all 0.3s ease; /* Smooth hover effects */
 }
 
 .social-icon:hover img {
-    opacity: 1;
-    transform: translateY(-2px);
+    opacity: 1; /* Fully opaque on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
 }
 
+/* Footer Bottom Section (Copyright and Message) */
 .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid #333;
+    max-width: 1200px; /* Max width for content alignment */
+    margin: 0 auto; /* Center the content */
+    padding-top: 1.5rem; /* Padding above the border */
+    border-top: 1px solid var(--border-gray); /* Separator line */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center text horizontally */
+    gap: 0.5rem; /* Space between text lines */
     text-align: center;
     font-size: 0.85rem;
-    color: #888;
+    color: var(--text-muted); /* Muted text color */
 }
 
 .footer-message {
     font-style: italic;
-    color: #DA00FF;
+    color: var(--text-purple); /* Highlighted message color */
 }
 
-/* Responsividade */
+/* --- Responsiveness for Footer --- */
 @media (max-width: 768px) {
     .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: 1fr; /* Stack all columns on small screens */
+        text-align: center; /* Center text for stacked items */
     }
-    
+
     .footer-links {
-        align-items: center;
+        align-items: center; /* Center navigation links when stacked */
     }
-    
+
     .footer-social {
-        justify-content: center;
-    }
-}.portfolio-footer {
-    background-color: #1a1a1a;
-    color: #E0E0E0;
-    padding: 2.5rem 1rem 1rem;
-    margin-top: 3rem;
-    border-top: 1px solid #DA00FF;
-    box-shadow: 0 -5px 15px rgba(218, 0, 255, 0.1);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-.footer-brand h3 {
-    color: #DA00FF;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-brand p {
-    color: #aaa;
-    font-size: 0.9rem;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.footer-link {
-    color: #E0E0E0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.footer-link:hover {
-    color: #DA00FF;
-}
-
-.footer-social {
-    display: flex;
-    gap: 1.2rem;
-    align-items: flex-start;
-}
-
-.social-icon img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover img {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-.footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #888;
-}
-
-.footer-message {
-    font-style: italic;
-    color: #DA00FF;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-links {
-        align-items: center;
-    }
-    
-    .footer-social {
-        justify-content: center;
+        justify-content: center; /* Center social icons when stacked */
     }
 }
